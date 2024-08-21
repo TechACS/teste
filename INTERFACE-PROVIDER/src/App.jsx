@@ -1,6 +1,7 @@
 import React from 'react';
 import { Outlet, useNavigate } from 'react-router-dom';
 import './App.css';
+import Sidebar from './components/SideBar/Sidebar';
 import { FiLogOut } from 'react-icons/fi';
 //import EquipamentosList from './components/equipamento/EquipamentosList';
 import Navbar from './components/navbar/navbar';
@@ -19,7 +20,7 @@ function App() {
   return (
     <div className="content">
       <Navbar></Navbar>
-  
+      <Sidebar />
 
    
 

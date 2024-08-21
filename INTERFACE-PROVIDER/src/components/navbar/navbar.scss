@@ -1,81 +1,83 @@
 /* Define um box-sizing global para manter o layout mais previsível */
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-  
-  /* Remove a margem padrão do body */
-  body {
-    font-family: 'Arial', sans-serif; /* Fonte moderna e legível */
-    background-color: #f4f4f4; /* Cor de fundo clara e neutra */
-  }
-  
-  /* Estilo da barra de navegação */
-  .nav {
-    background-color: #ffffff; /* Fundo branco para uma aparência limpa */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil para profundidade */
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1rem 2rem;
-    position: fixed; /* Fixa a barra de navegação no topo */
-    width: 100%; /* Ocupa toda a largura da tela */
-    top: 0;
-    left: 0;
-    z-index: 300; /* Garante que a navegação fique acima de outros elementos */
-  }
-  
-  /* Estilo dos itens de lista na navegação */
-  .nav ul {
-    display: flex;
-    gap: 1rem;
-    list-style: none;
-    align-items: center; /* Alinha verticalmente os itens da lista */
-  }
-  
-  /* Estilo dos links de navegação */
-  .nav h1 {
-    color: #333; /* Cor do texto do link */
-    text-decoration: none; /* Remove o sublinhado padrão */
-    display: flex;
-    align-items: center;
-    padding: 0.5rem 1rem; /* Espaçamento interno confortável */
-    border-radius: 4px; /* Bordas arredondadas para um toque moderno */
-    transition: background-color 0.3s, color 0.3s; /* Transição suave para hover */
-    z-index: 4000;
-    font-size: 16px;
-  }
-  
-  /* Estilo do ícone dentro do link */
-  .icon {
-    font-size: 24px; /* Tamanho do ícone */
-    margin-right: 0.5rem; /* Espaçamento entre o ícone e o texto */
-    z-index: 310000;
-  }
-  
-  /* Estilo do item ativo na navegação */
-  .nav li.active h1 {
-    background-color: #007bff; /* Cor de fundo do item ativo */
-    color: #ffffff; /* Cor do texto do item ativo */
-    z-index: 3003;
-  }
-  
-  /* Estilo do item da navegação quando o mouse passa sobre ele */
-  .nav li:hover h1 {
-    background-color: #f0f0f0; /* Cor de fundo no hover */
-    color: #333; /* Cor do texto no hover */
-  }
-  
-  /* Estilo para o ícone de logout */
-  
-  /* Estilo para o ícone de logout */
-  .nav ul .logout-icon {
-    display: flex;
-    align-items: center; /* Centraliza verticalmente o ícone */
-    justify-content: center; /* Centraliza horizontalmente o ícone */
-    font-size: 25px; /* Tamanho do ícone de logout */
-    color: #f0260b; /* Cor do ícone de logout */
-    cursor: pointer; /* Indica que o ícone é clicável */
-    z-index: 9999;
-  }
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove a margem padrão do body */
+body {
+  font-family: 'Arial', sans-serif; /* Fonte moderna e legível */
+  background-color: #f4f4f4; /* Cor de fundo clara e neutra */
+}
+
+/* Estilo da barra de navegação */
+.nav {
+  background-color: #ffffff; /* Fundo branco para uma aparência limpa */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra mais suave */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 2rem; /* Espaçamento mais compacto */
+  position: fixed; /* Fixa a barra de navegação no topo */
+  width: 100%; /* Ocupa toda a largura da tela */
+  top: 0;
+  left: 0;
+  z-index: 300; /* Garante que a navegação fique acima de outros elementos */
+  transition: background-color 0.3s ease; /* Transição suave para a cor de fundo */
+}
+
+/* Estilo dos itens de lista na navegação */
+.nav ul {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  align-items: center; /* Alinha verticalmente os itens da lista */
+}
+
+/* Estilo dos links de navegação */
+.nav h1 {
+  color: #333; /* Cor do texto do link */
+  text-decoration: none; /* Remove o sublinhado padrão */
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem; /* Espaçamento interno confortável */
+  border-radius: 8px; /* Bordas mais arredondadas */
+  transition: background-color 0.3s, color 0.3s, transform 0.3s; /* Transições suaves */
+  font-size: 16px;
+}
+
+/* Estilo do ícone dentro do link */
+.icon {
+  font-size: 24px; /* Tamanho do ícone */
+  margin-right: 0.5rem; /* Espaçamento entre o ícone e o texto */
+}
+
+/* Estilo do item ativo na navegação */
+.nav li.active h1 {
+  background-color: #007bff; /* Cor de fundo do item ativo */
+  color: #ffffff; /* Cor do texto do item ativo */
+}
+
+/* Estilo do item da navegação quando o mouse passa sobre ele */
+.nav li:hover h1 {
+  background-color: #f0f0f0; /* Cor de fundo no hover */
+  color: #007bff; /* Cor do texto no hover */
+  transform: scale(1.05); /* Leve aumento no hover */
+}
+
+/* Estilo para o ícone de logout */
+.nav ul .logout-icon {
+  display: flex;
+  align-items: center; /* Centraliza verticalmente o ícone */
+  justify-content: center; /* Centraliza horizontalmente o ícone */
+  font-size: 25px; /* Tamanho do ícone de logout */
+  color: #f0260b; /* Cor do ícone de logout */
+  cursor: pointer; /* Indica que o ícone é clicável */
+  transition: color 0.3s, transform 0.3s; /* Transições suaves */
+}
+
+.nav ul .logout-icon:hover {
+  color: #d53f3f; /* Cor do ícone ao passar o mouse */
+  transform: scale(1.2); /* Leve aumento no hover */
+}
