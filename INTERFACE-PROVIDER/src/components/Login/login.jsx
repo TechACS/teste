@@ -1,27 +1,33 @@
 import React, { useState } from 'react';
 import './login.scss';
 
-// Função para validar a entrada
-const validateInput = (input) => {
-  const regex = /^[a-zA-Z0-9@._-]+$/;
-  return regex.test(input);
+// Função para validar o email e a senha
+const validateEmail = (email) => {
+  const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return regex.test(email);
+};
+
+const validatePassword = (password) => {
+  // Adapte o regex conforme suas necessidades de segurança
+  const regex = /^[a-zA-Z0-9@!$%^&*()_+={}|[\]\\:;'"<>,.?/]+$/;
+  return regex.test(password);
 };
 
 function LoginForm({ onLogin, error, lockTime }) {
-  const [user, setUser] = useState('');
+  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [inputError, setInputError] = useState('');
 
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    if (!validateInput(user) || !validateInput(password)) {
-      setInputError('Entrada inválida. Caracteres não permitidos.');
+    if (!validateEmail(email) || !validatePassword(password)) {
+      setInputError('Entrada inválida. Verifique o email e a senha.');
       return;
     }
 
     setInputError('');
-    onLogin(user, password);
+    onLogin(email, password);
   };
 
   return (
@@ -31,12 +37,12 @@ function LoginForm({ onLogin, error, lockTime }) {
           <form className="sign-in-form" onSubmit={handleSubmit}>
             <h2 className="title">Entrar</h2>
             <div className="input-field">
-              <i className="fas fa-user"></i>
+              <i className="fas fa-envelope"></i>
               <input
-                type="text"
-                placeholder="Usuário"
-                value={user}
-                onChange={(e) => setUser(e.target.value)}
+                type="email"
+                placeholder="Email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 required
               />
             </div>
@@ -63,12 +69,12 @@ function LoginForm({ onLogin, error, lockTime }) {
             )}
           </form>
         </div>
-      </div>
-      
-      <div className="panels-container">
-        <div className="panel left-panel">
-          <div className="content">
-            <h3>Seja bem-vindo</h3>
+
+        <div className="panels-container">
+          <div className="panel left-panel">
+            <div className="content">
+              <h3>Seja bem-vindo</h3>
+            </div>
           </div>
         </div>
       </div>

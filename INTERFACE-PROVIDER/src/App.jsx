@@ -22,7 +22,7 @@ function App() {
   
 
    
-      <EquipamentosList></EquipamentosList>
+
       <Outlet />
     </div>
   );

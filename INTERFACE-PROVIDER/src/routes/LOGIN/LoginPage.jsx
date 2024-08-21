@@ -40,41 +40,64 @@ function LoginPage() {
     return () => clearInterval(timer);
   }, [lockTime]);
 
-  const handleLogin = async (user, password) => {
-    // Simula o login com um usuário e senha aleatórios
-    const validUser = "validUser";
-    const validPassword = "validPassword";
-
+  const handleLogin = async (email, password) => {
     if (lockTime > 0) {
       setError(`Conta bloqueada. Tente novamente em ${lockTime} segundos.`);
       return;
     }
 
-    if (user !== validUser || password !== validPassword) {
-      setAttempts(prev => {
-        const newAttempts = prev + 1;
-
-        if (newAttempts >= MAX_ATTEMPTS) {
-          const newLockTime = Date.now() + BLOCK_TIME;
-          localStorage.setItem('lockTime', newLockTime);
-          localStorage.setItem('attempts', 0);
-          setLockTime(Math.ceil(BLOCK_TIME / 1000)); // Tempo inicial do bloqueio
-          setError(`Conta bloqueada. Tente novamente em 3 minutos.`);
-        } else {
-          localStorage.setItem('attempts', newAttempts);
-          setAttempts(newAttempts);
-          setError('Credenciais inválidas.');
-        }
-        return newAttempts;
+    try {
+      const response = await fetch('http://localhost:3000/auth/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email, password }),
       });
-      return;
-    }
 
-    // Login bem-sucedido
-    localStorage.removeItem('lockTime');
-    localStorage.removeItem('attempts');
-    setAttempts(0);
-    navigate('/');
+      const data = await response.json();
+      console.log('Login response:', data);
+
+      if (response.ok && data.token) {
+        localStorage.setItem('token', data.token);
+        localStorage.removeItem('lockTime');
+        localStorage.removeItem('attempts');
+        setAttempts(0);
+        navigate('/');
+      } else {
+        if (response.status === 403 && data.msg.includes('Tente novamente em')) {
+          // Extrai o tempo restante da mensagem
+          const timeLeftMatch = data.msg.match(/Tente novamente em (\d+) segundos/);
+          if (timeLeftMatch) {
+            const lockTimeSeconds = parseInt(timeLeftMatch[1], 10);
+            const newLockTime = Date.now() + lockTimeSeconds * 1000;
+            localStorage.setItem('lockTime', newLockTime);
+            localStorage.setItem('attempts', 0);
+            setLockTime(lockTimeSeconds);
+            setError(`Conta bloqueada. Tente novamente em ${lockTimeSeconds} segundos.`);
+          }
+        } else {
+          setAttempts(prev => {
+            const newAttempts = prev + 1;
+
+            if (newAttempts >= MAX_ATTEMPTS) {
+              const newLockTime = Date.now() + BLOCK_TIME;
+              localStorage.setItem('lockTime', newLockTime);
+              localStorage.setItem('attempts', 0);
+              setLockTime(Math.ceil(BLOCK_TIME / 1000)); // Tempo inicial do bloqueio
+              setError(`Conta bloqueada. Tente novamente em 3 minutos.`);
+            } else {
+              localStorage.setItem('attempts', newAttempts);
+              setAttempts(newAttempts);
+              setError('Credenciais inválidas.');
+            }
+            return newAttempts;
+          });
+        }
+      }
+    } catch (error) {
+      setError('Erro ao fazer login');
+    }
   };
 
   return (
