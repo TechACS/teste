@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Sidebar.scss';
+import SidebarTopic from './componente/SidebarTopic';
 
+// Componente para a sidebar
 function Sidebar() {
   // Estados para a sidebar colapsada e para a visibilidade de sub-tópicos
   const [isCollapsed, setIsCollapsed] = useState(false);
@@ -25,6 +27,38 @@ function Sidebar() {
     }));
   };
 
+  // Dados dos tópicos e sub-tópicos
+  const topics = [
+    {
+      name: 'Home',
+      subtopics: [],
+    },
+    {
+      name: 'Servidores',
+      subtopics: [
+        { path: '/MigraçãoDeServidor', label: 'Migração De Servidor' },
+        { path: '/', label: 'Gerar Certificado SSL' },
+        { path: '/DesativarEmail', label: 'Desativar Email' },
+      ],
+    },
+    {
+      name: 'Migração',
+      subtopics: [
+        { path: '/teste2', label: 'teste2' },
+        { path: '/teste1', label: 'teste1' },
+        { path: '/teste3', label: 'teste3' },
+      ],
+    },
+    {
+      name: 'Banco de dados',
+      subtopics: [
+        { path: '/CriarDocumentação', label: 'Criar documentação' },
+        { path: '/FazerUpload', label: 'Fazer upload de arquivo' },
+        { path: '/teste3', label: 'teste3' },
+      ],
+    },
+  ];
+
   return (
     <div className={`sidebar ${isCollapsed ? 'collapsed' : ''}`}>
       <button className="toggle-btn" onClick={toggleSidebar}>
@@ -32,91 +66,15 @@ function Sidebar() {
       </button>
 
       <div className="content">
-        <div className='servidores'>
-          <div className='topicostyles'>
-            <Link to="/Home">
-              <h1 onClick={() => toggleSubtopics('Home')}>Home</h1>
-            </Link>
-          </div>
-        </div>
-
-        <div className='servidores'>
-          <div className='topicostyles'>
-            <h1 onClick={() => toggleSubtopics('servidores')}>Servidores</h1>
-          </div>
-
-          {visibleSubtopics.servidores && (
-            <div className="subtopics">
-              <Link to="/MigraçãoDeServidor" className="card-link">
-                <div className="card">
-                  <h1>Migração De Servidor</h1>
-                </div>
-              </Link>
-              <Link to="/" className="card-link">
-                <div className="card">
-                  <h1>Gerar Certificado SSL</h1>
-                </div>
-              </Link>
-              <Link to="/DesativarEmail" className="card-link">
-                <div className="card">
-                  <h1>Desativar Email</h1>
-                </div>
-              </Link>
-            </div>
-          )}
-        </div>
-
-        <div className='servidores'>
-          <div className='topicostyles'>
-            <h1 onClick={() => toggleSubtopics('migracao')}>Migração</h1>
-          </div>
-
-          {visibleSubtopics.migracao && (
-            <div className="subtopics">
-              <Link to="/teste2" className="card-link">
-                <div className="card">
-                  <h1>teste2</h1>
-                </div>
-              </Link>
-              <Link to="/teste1" className="card-link">
-                <div className="card">
-                  <h1>teste1</h1>
-                </div>
-              </Link>
-              <Link to="/teste3" className="card-link">
-                <div className="card">
-                  <h1>teste3</h1>
-                </div>
-              </Link>
-            </div>
-          )}
-        </div>
-
-        <div className='servidores'>
-          <div className='topicostyles'>
-            <h1 onClick={() => toggleSubtopics('Bancodedados')}>Banco de dados</h1>
-          </div>
-
-          {visibleSubtopics.Bancodedados && (
-            <div className="subtopics">
-              <Link to="/CriarDocumentação" className="card-link">
-                <div className="card">
-                  <h1>Criar documentação</h1>
-                </div>
-              </Link>
-              <Link to="/FazerUpload" className="card-link">
-                <div className="card">
-                  <h1>Fazer upload de arquivo</h1>
-                </div>
-              </Link>
-              <Link to="/teste3" className="card-link">
-                <div className="card">
-                  <h1>teste3</h1>
-                </div>
-              </Link>
-            </div>
-          )}
-        </div>
+        {topics.map((topic, index) => (
+          <SidebarTopic
+            key={index}
+            topic={topic.name}
+            subtopics={topic.subtopics}
+            toggleSubtopics={toggleSubtopics}
+            visibleSubtopics={visibleSubtopics}
+          />
+        ))}
       </div>
     </div>
   );
