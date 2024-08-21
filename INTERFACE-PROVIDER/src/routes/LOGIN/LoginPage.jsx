@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import LoginForm from '../../components/Login/login';
 
 const BLOCK_TIME = 3 * 60 * 1000; // 3 minutos em milissegundos
-const MAX_ATTEMPTS = 3;
+const MAX_ATTEMPTS = 5; // Máximo de tentativas antes do bloqueio no frontend
 
 function LoginPage() {
   const [error, setError] = useState('');
@@ -41,6 +41,7 @@ function LoginPage() {
   }, [lockTime]);
 
   const handleLogin = async (email, password) => {
+    // Verifica se a conta está bloqueada no frontend
     if (lockTime > 0) {
       setError(`Conta bloqueada. Tente novamente em ${lockTime} segundos.`);
       return;
@@ -63,6 +64,7 @@ function LoginPage() {
         localStorage.removeItem('lockTime');
         localStorage.removeItem('attempts');
         setAttempts(0);
+        setError('');
         navigate('/');
       } else {
         if (response.status === 403 && data.msg.includes('Tente novamente em')) {
@@ -85,7 +87,7 @@ function LoginPage() {
               localStorage.setItem('lockTime', newLockTime);
               localStorage.setItem('attempts', 0);
               setLockTime(Math.ceil(BLOCK_TIME / 1000)); // Tempo inicial do bloqueio
-              setError(`Conta bloqueada. Tente novamente em 3 minutos.`);
+              setError(`Conta bloqueada por excesso de tentativas. Tente novamente em 3 minutos.`);
             } else {
               localStorage.setItem('attempts', newAttempts);
               setAttempts(newAttempts);

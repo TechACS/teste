@@ -17,7 +17,7 @@ function Navbar() {
     <div>
       <nav className='nav'>
         <Link to="/">
-          <h1 className='icon'>Central client</h1>
+          <h1 className='icon'>gerencia provider</h1>
         </Link>
         <ul>
         <li>
