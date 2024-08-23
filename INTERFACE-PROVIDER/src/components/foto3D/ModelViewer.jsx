@@ -20,7 +20,7 @@ function RotatingModel() {
       object={scene} 
       position={[0, 0, 0]} 
       rotation={[0, 0, 0]} 
-      scale={[1, 3, 0]} // Escala uniforme em todos os eixos
+      scale={[2.5, 2.5, 0]} // Escala uniforme em todos os eixos
     />
   );
 }

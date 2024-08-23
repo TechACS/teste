@@ -1,15 +1,16 @@
+/* ModelViewer.scss */
 .canvas-container {
-  width: 200px; /* Ajuste o valor conforme necessário */
-  height: 200px; /* Ajuste o valor conforme necessário */
-  /* Outros estilos, se necessários */
-
-  
- margin-left: 1340px;
- margin-top: 150px;
-  position: fixed;
-  z-index: 1000;
-
+  width: 145vw; /* Ocupa toda a largura da viewport */
+  height: 15vh; /* Ocupa toda a altura da viewport */
+  margin-top: 200px;
+  margin-left: 50px;
+  z-index: 20;
+  justify-content: center;
+  align-items: center; /* Centraliza o conteúdo verticalmente */
+  position: relative;
+ /* Garante que o conteúdo não ultrapasse os limites */
 }
+
 /* Para telas muito, muito pequenas (até 360px) */
 @media (max-width: 450px) {
   .canvas-container {
@@ -29,12 +30,12 @@
 @media (max-width: 370px) {
   .canvas-container {
     width: 200px; /* Ajuste o valor conforme necessário */
-    height: 200px; /* Ajuste o valor conforme necessário */
+    height: 150px; /* Ajuste o valor conforme necessário */
     /* Outros estilos, se necessários */
   
     
    margin-left: 50px;
-   margin-top: 230px;
+   margin-top: 250px;
 
     z-index: 1000;
   
