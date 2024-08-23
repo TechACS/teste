@@ -10,3 +10,33 @@
   z-index: 1000;
 
 }
+/* Para telas muito, muito pequenas (até 360px) */
+@media (max-width: 450px) {
+  .canvas-container {
+    width: 200px; /* Ajuste o valor conforme necessário */
+    height: 200px; /* Ajuste o valor conforme necessário */
+    /* Outros estilos, se necessários */
+  
+    
+   margin-left: 70px;
+   margin-top: 400px;
+
+    z-index: 1000;
+  
+  }
+}
+
+@media (max-width: 370px) {
+  .canvas-container {
+    width: 200px; /* Ajuste o valor conforme necessário */
+    height: 200px; /* Ajuste o valor conforme necessário */
+    /* Outros estilos, se necessários */
+  
+    
+   margin-left: 50px;
+   margin-top: 230px;
+
+    z-index: 1000;
+  
+  }
+}

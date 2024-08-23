@@ -380,3 +380,10 @@ form.sign-in-form {
     left: 50%;
   }
 }
+
+@media (max-width: 370px) {
+  form.sign-in-form {
+    
+    margin-top: -400px;
+  }
+}
