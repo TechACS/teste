@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './login.scss';
-
+import ModelViewer from '../foto3D/ModelViewer';
 // Função para validar o email e a senha
 const validateEmail = (email) => {
   const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -32,12 +32,20 @@ function LoginForm({ onLogin, error, lockTime }) {
 
   return (
     <div className="container">
+      <div>
+      <ModelViewer /> 
+      </div>
+   
       <div className="forms-container">
+      
         <div className="signin-signup">
+      
           <form className="sign-in-form" onSubmit={handleSubmit}>
+ 
             <h2 className="title">Entrar</h2>
             <div className="input-field">
               <i className="fas fa-envelope"></i>
+              
               <input
                 type="email"
                 placeholder="Email"
@@ -45,9 +53,11 @@ function LoginForm({ onLogin, error, lockTime }) {
                 onChange={(e) => setEmail(e.target.value)}
                 required
               />
+           
             </div>
             <div className="input-field">
               <i className="fas fa-lock"></i>
+              
               <input
                 type="password"
                 placeholder="Senha"
@@ -56,12 +66,14 @@ function LoginForm({ onLogin, error, lockTime }) {
                 required
               />
             </div>
+            
             <input
               type="submit"
               value="Login"
               className="btn solid"
               disabled={lockTime > 0}
             />
+            
             {inputError && <p className="error">{inputError}</p>}
             {error && <p className="error">{error}</p>}
             {lockTime !== null && lockTime > 0 && (
