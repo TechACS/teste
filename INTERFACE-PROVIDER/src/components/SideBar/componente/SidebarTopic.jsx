@@ -3,11 +3,18 @@ import { Link } from 'react-router-dom';
 import './SidebarTopic.scss'; // Se necessário, crie um arquivo de estilo separado
 
 // Componente para tópico da sidebar
-function SidebarTopic({ topic, subtopics, toggleSubtopics, visibleSubtopics }) {
+function SidebarTopic({ topic, path, subtopics, toggleSubtopics, visibleSubtopics }) {
   return (
     <div className='servidores'>
       <div className='topicostyles'>
-        <h1 onClick={() => toggleSubtopics(topic)}>{topic}</h1>
+        {/* Se path está disponível, renderiza um link */}
+        {path ? (
+          <Link to={path} className="topic-link">
+            <h1>{topic}</h1>
+          </Link>
+        ) : (
+          <h1 onClick={() => toggleSubtopics(topic)}>{topic}</h1>
+        )}
       </div>
 
       {visibleSubtopics[topic] && (

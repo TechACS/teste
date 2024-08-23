@@ -5,7 +5,6 @@ import SidebarTopic from './componente/SidebarTopic';
 
 // Componente para a sidebar
 function Sidebar() {
-  // Estados para a sidebar colapsada e para a visibilidade de sub-tópicos
   const [isCollapsed, setIsCollapsed] = useState(false);
   const [visibleSubtopics, setVisibleSubtopics] = useState({
     servidores: false,
@@ -14,12 +13,10 @@ function Sidebar() {
     Bancodedados: false,
   });
 
-  // Função para alternar a visibilidade da sidebar
   const toggleSidebar = () => {
     setIsCollapsed(!isCollapsed);
   };
 
-  // Função para alternar a visibilidade dos sub-tópicos individuais
   const toggleSubtopics = (topic) => {
     setVisibleSubtopics((prevState) => ({
       ...prevState,
@@ -29,32 +26,21 @@ function Sidebar() {
 
   // Dados dos tópicos e sub-tópicos
   const topics = [
+    { name: 'Home', path: '/' },
+    { name: 'cliente', path: '/cliente' },
+    { name: 'equipamentos', path: '/equipamentos' },
     {
-      name: 'Home',
-      subtopics: [],
-    },
-    {
-      name: 'Servidores',
+      name: 'gerencia adm',
       subtopics: [
-        { path: '/MigraçãoDeServidor', label: 'Migração De Servidor' },
-        { path: '/', label: 'Gerar Certificado SSL' },
-        { path: '/DesativarEmail', label: 'Desativar Email' },
+        { path: '/CriarDocumentação', label: 'criar usuario' },
+        { path: '/FazerUpload', label: 'auditoria' },
       ],
     },
     {
-      name: 'Migração',
+      name: 'server',
       subtopics: [
-        { path: '/teste2', label: 'teste2' },
-        { path: '/teste1', label: 'teste1' },
-        { path: '/teste3', label: 'teste3' },
-      ],
-    },
-    {
-      name: 'Banco de dados',
-      subtopics: [
-        { path: '/CriarDocumentação', label: 'Criar documentação' },
-        { path: '/FazerUpload', label: 'Fazer upload de arquivo' },
-        { path: '/teste3', label: 'teste3' },
+        { path: '/CriarDocumentação', label: 'terminal' },
+        { path: '/FazerUpload', label: 'auditoria' },
       ],
     },
   ];
@@ -70,6 +56,7 @@ function Sidebar() {
           <SidebarTopic
             key={index}
             topic={topic.name}
+            path={topic.path}  // Adiciona a prop path
             subtopics={topic.subtopics}
             toggleSubtopics={toggleSubtopics}
             visibleSubtopics={visibleSubtopics}
