@@ -7,8 +7,8 @@ function Cliente() {
     <div className='cabecalho'>
 
       <div className='cabecalhoh1'>
-        <h1>cadastro cliente</h1>
-        <hr />
+        
+      
       </div>
 
     </div>
