@@ -1,17 +1,33 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './Sidebar.scss';
 import SidebarTopic from './componente/SidebarTopic';
 
-// Componente para a sidebar
 function Sidebar() {
-  const [isCollapsed, setIsCollapsed] = useState(false);
+  const [isCollapsed, setIsCollapsed] = useState(false); // Começa aberto por padrão
   const [visibleSubtopics, setVisibleSubtopics] = useState({
     servidores: false,
     migracao: false,
     Home: false,
     Bancodedados: false,
   });
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth <= 430) {
+        setIsCollapsed(true);
+      } else {
+        setIsCollapsed(false);
+      }
+    };
+
+    window.addEventListener('resize', handleResize);
+    handleResize(); // Verifica o tamanho da tela ao montar
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   const toggleSidebar = () => {
     setIsCollapsed(!isCollapsed);
@@ -46,7 +62,7 @@ function Sidebar() {
   ];
 
   return (
-    <div className={`sidebar ${isCollapsed ? 'collapsed' : ''}`}>
+    <div className={`sidebar ${isCollapsed ? 'collapsed' : 'expanded'}`}>
       <button className="toggle-btn" onClick={toggleSidebar}>
         {isCollapsed ? '▶' : '◀'}
       </button>

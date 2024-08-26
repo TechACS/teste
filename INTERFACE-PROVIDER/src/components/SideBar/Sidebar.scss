@@ -1,91 +1,101 @@
-// Estilo para o sidebar
+/* Estilo padrão para a sidebar */
 .sidebar {
-    width: 280px;
-    height: 100vh;
-    background-color: #ffffff; // Fundo branco
-    color: #333333; // Texto cinza escuro
-    position: fixed;
-    top: 69px;
-    left: 0;
-    transition: width 0.3s;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); // Sombra leve
-    z-index: 1000; // Fica acima de outros elementos
-  
-    &.collapsed {
-      width: 25px; // Largura reduzida quando colapsada
-      .content {
-        display: none; // Esconde o conteúdo quando colapsada
-      }
-    }
-  
-    .toggle-btn {
-      background: none;
-      border: none;
-      color: #333333; // Cor do texto do botão
-      font-size: 20px;
-      cursor: pointer;
-      padding: 10px;
-      margin: 10px;
-      align-self: flex-end;
-      transition: transform 0.3s;
-  
-      &:focus {
-        outline: none;
-      }
-    }
-  
+  width: 280px; /* Largura padrão para telas maiores */
+  height: 100vh;
+  background-color: #ffffff; /* Fundo branco */
+  color: #333333; /* Texto cinza escuro */
+  position: fixed;
+  top: 69px;
+  left: 0;
+  transition: width 0.3s;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Sombra leve */
+  z-index: 1000; /* Fica acima de outros elementos */
+
+  &.collapsed {
+    width: 25px; /* Largura reduzida quando colapsada */
     .content {
-      padding: 20px;
-  
-      .servidores {
-        cursor: pointer; // Cursor indicando que é clicável
+      display: none; /* Esconde o conteúdo quando colapsada */
+    }
+  }
+
+  .toggle-btn {
+    background: none;
+    border: none;
+    color: #333333; /* Cor do texto do botão */
+    font-size: 20px;
+    cursor: pointer;
+    padding: 10px;
+    margin: 10px;
+    align-self: flex-end;
+    transition: transform 0.3s;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .content {
+    padding: 20px;
+
+    .servidores {
+      cursor: pointer; /* Cursor indicando que é clicável */
+    }
+
+    .subtopics {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card-link {
+      text-decoration: none;
+      width: 100%;
+      margin-bottom: 15px;
+    }
+
+    .card {
+      margin-left: 25px;
+      color: #333333; /* Texto cinza escuro */
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra leve */
+      padding: 15px;
+      width: 90%;
+      transition: box-shadow 0.3s, background-color 0.3s;
+
+      &:hover {
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15); /* Sombra mais intensa ao passar o mouse */
+        background-color: #f9f9f9; /* Cor de fundo mais clara ao passar o mouse */
       }
-  
-      .subtopics {
-        display: flex;
-        flex-direction: column;
-      }
-  
-      .card-link {
-        text-decoration: none;
-        width: 100%;
-        margin-bottom: 15px;
-      }
-  
-      .card {
-        margin-left: 25px;
-        color: #333333; // Texto cinza escuro
-        border-radius: 8px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); // Sombra leve
-        padding: 15px;
-        width: 90%;
-        transition: box-shadow 0.3s, background-color 0.3s;
-  
-        &:hover {
-          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15); // Sombra mais intensa ao passar o mouse
-          background-color: #f9f9f9; // Cor de fundo mais clara ao passar o mouse
-        }
-  
-        h1 {
-          margin: 0;
-          font-size: 16px;
-          text-align: center;
-          border-radius: 4px; // Bordas arredondadas
-        }
+
+      h1 {
+        margin: 0;
+        font-size: 16px;
+        text-align: center;
+        border-radius: 4px; /* Bordas arredondadas */
       }
     }
   }
-  
-  // Responsividade
-  @media (max-width: 750px) {
-    .sidebar {
-      width: 55px; // Largura reduzida em telas pequenas
-      .content {
-        display: none; // Esconde o conteúdo quando colapsada em telas pequenas
-      }
+}
+
+/* Responsividade para telas menores que 750px */
+@media (max-width: 750px) {
+  .sidebar {
+    width: 55px; /* Largura reduzida em telas menores que 750px */
+    .content {
+      display: none; /* Esconde o conteúdo em telas menores que 750px */
     }
   }
-  
+}
+
+/* Responsividade para telas menores que 430px */
+@media (max-width: 430px) {
+  .sidebar {
+    width: 45%; /* Largura ajustada em telas menores que 430px */
+  }
+
+  .sidebar.collapsed {
+    width: 25px; /* Largura reduzida quando colapsada em telas menores que 430px */
+  }
+}

@@ -9,6 +9,9 @@ import LoginPage from './routes/LOGIN/LoginPage';
 import App from './App';
 import ProtectedRoute from './components/Login/ProtectedRoute';
 
+
+import Cliente from './routes/Client/Cliente';
+
 const router = createBrowserRouter([
   {
     path: '/login',
@@ -23,6 +26,10 @@ const router = createBrowserRouter([
       {
         path: 'home',
         element: <ProtectedRoute element={<Home />} />, // Protege a rota /home
+      },
+      {
+        path: 'Cliente',
+        element: <ProtectedRoute element={<Cliente />} />, // Protege a rota /home
       },
       // Adicione outras rotas protegidas aqui
     ],

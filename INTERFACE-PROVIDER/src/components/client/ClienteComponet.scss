@@ -1,0 +1,44 @@
+/* selecao.scss */
+.ComponenteCriarFileDB {
+    background-color: #fff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    border-radius: 8px; /* Bordas arredondadas */
+    margin: 20px;
+    width: 400px;
+    height: 250px;
+    padding: 20px;
+    box-sizing: border-box;
+    font-size: 16px; /* Tamanho da fonte ajustado */
+    font-weight: 400; /* Peso da fonte ajustado */
+    line-height: 1.5; /* Aumenta a altura da linha para melhor leitura */
+    color: #222222; /* Cor de texto mais escura */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; /* Transições suaves */
+  
+    &:hover {
+      background-color: #f0f0f0; /* Cor de fundo mais clara para o efeito hover */
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Sombra mais intensa para destacar o hover */
+      transform: scale(1.05); /* Efeito de zoom mais visível */
+    }
+  
+    h1 {
+      text-align: center;
+      margin: 0; /* Remove a margem padrão do h1 */
+      font-size: 24px; /* Ajusta o tamanho da fonte do h1 */
+      font-weight: 600; /* Aumenta o peso da fonte do h1 */
+    }
+  }
+  .plus-icon {
+    display: flex;
+    justify-content: center; 
+    align-items: center; /* Centraliza o ícone verticalmente */
+    color: #474545; /* Cor do ícone */
+    cursor: pointer; /* Indica que o ícone é clicável */
+    font-size: 2rem; /* Ajusta o tamanho do ícone */
+    margin: 0 auto; /* Centraliza horizontalmente o contêiner do ícone */
+  }
+  
+  .plus-icon1 {
+    height: 150px; /* Ajusta a altura do contêiner do ícone */
+    width: 150px;
+    margin-top: -0px;
+  }
