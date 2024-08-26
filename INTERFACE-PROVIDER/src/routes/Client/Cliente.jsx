@@ -1,24 +1,15 @@
 import React from 'react'
 import './Cliente.scss';
+import ClienteComponetcabecalho from '../../components/client/Cabeçalho/ClienteComponetCabeçalho';
+
 function Cliente() {
   return (
-    <div className='teste'>
+    <div >
 
-    <div className='cabecalho'>
-
-      <div className='cabecalhoh1'>
-        
-      
-      </div>
-
-    </div>
-
-    <div className='subcabecalho'>
-
-  
-    
-    </div>
-
+      <ClienteComponetcabecalho>
+       
+      </ClienteComponetcabecalho>
+ 
     
     
   </div>

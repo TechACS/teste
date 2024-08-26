@@ -1,44 +1,80 @@
-/* selecao.scss */
-.ComponenteCriarFileDB {
-    background-color: #fff;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-    border-radius: 8px; /* Bordas arredondadas */
-    margin: 20px;
-    width: 400px;
-    height: 250px;
-    padding: 20px;
-    box-sizing: border-box;
-    font-size: 16px; /* Tamanho da fonte ajustado */
-    font-weight: 400; /* Peso da fonte ajustado */
-    line-height: 1.5; /* Aumenta a altura da linha para melhor leitura */
-    color: #222222; /* Cor de texto mais escura */
-    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; /* Transições suaves */
-  
-    &:hover {
-      background-color: #f0f0f0; /* Cor de fundo mais clara para o efeito hover */
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Sombra mais intensa para destacar o hover */
-      transform: scale(1.05); /* Efeito de zoom mais visível */
-    }
-  
-    h1 {
-      text-align: center;
-      margin: 0; /* Remove a margem padrão do h1 */
-      font-size: 24px; /* Ajusta o tamanho da fonte do h1 */
-      font-weight: 600; /* Aumenta o peso da fonte do h1 */
-    }
-  }
-  .plus-icon {
-    display: flex;
-    justify-content: center; 
-    align-items: center; /* Centraliza o ícone verticalmente */
-    color: #474545; /* Cor do ícone */
-    cursor: pointer; /* Indica que o ícone é clicável */
-    font-size: 2rem; /* Ajusta o tamanho do ícone */
-    margin: 0 auto; /* Centraliza horizontalmente o contêiner do ícone */
-  }
-  
-  .plus-icon1 {
-    height: 150px; /* Ajusta a altura do contêiner do ícone */
-    width: 150px;
-    margin-top: -0px;
-  }
+.header-content {
+  display: flex;
+  justify-content: space-between; /* Ajusta o espaçamento entre os itens */
+  align-items: center; /* Alinha verticalmente os itens ao centro */
+ margin-right: 5%;
+ margin-left: 5%;
+margin-top: 2%;
+  background: #ffffff;
+
+  border-radius: 8px;
+}
+
+.header-item {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Alinha o conteúdo ao centro */
+  gap: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Leve sombra ao redor de cada item */
+  padding: 10px;
+  border-radius: 8px; /* Borda arredondada para os itens */
+  background: #ffffff; /* Fundo branco para cada item */
+  transition: box-shadow 0.3s, transform 0.3s; /* Transições suaves para efeitos de hover */
+}
+
+.header-item:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Aumenta a sombra no hover */
+  transform: translateY(-2px); /* Adiciona um efeito de levantamento */
+}
+
+.add-client-container {
+  width: 10; /* Largura específica */
+  height: 60px; /* Altura específica */
+  flex: 0 0 auto; /* Não se expande ou contrai */
+}
+
+.search-container {
+  width: 50%; /* Largura específica */
+  flex: 0 0 auto; /* Não se expande ou contrai */
+}
+
+.search-input {
+  border: 1px solid #ccc; /* Adiciona uma borda leve */
+  border-radius: 8px;
+  padding: 8px; /* Padding ajustado */
+  width: 100%;
+  font-size: 14px; /* Tamanho da fonte ajustado */
+  outline: none; /* Remove o contorno padrão */
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+.search-input:focus {
+  border-color: #007bff; /* Cor da borda ao focar no campo */
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Sombra suave ao redor do campo de busca */
+}
+
+.export-container {
+  width: 10; /* Largura específica */
+  height: 60px; /* Altura específica */
+  flex: 0 0 auto;
+}
+
+.icon {
+  font-size: 20px; /* Ajusta o tamanho do ícone */
+  color: #007bff; /* Cor dos ícones */
+}
+
+.text {
+  font-size: 14px; /* Ajusta o tamanho do texto */
+  color: #333; /* Cor do texto */
+}
+
+.stats-container {
+  flex: 1; /* Ocupa espaço restante se necessário */
+}
+
+/* Opcional: Adiciona espaçamento e formatação ao texto do total de clientes */
+.total-number {
+  font-size: 18px; /* Tamanho do texto ajustado para ser menor */
+  color: #007bff;
+  margin-top: 10px;
+}
