@@ -32,6 +32,8 @@ function ClienteComponet() {
         </div>
       </BackgroundComponente>
     </div>
+
+
   );
 }
 

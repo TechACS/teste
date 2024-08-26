@@ -1,44 +1,37 @@
-/* selecao.scss */
-.ComponenteCriarFileDB {
-    background-color: #fff;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-    border-radius: 8px; /* Bordas arredondadas */
-    margin: 20px;
-    width: 400px;
-    height: 250px;
-    padding: 20px;
-    box-sizing: border-box;
-    font-size: 16px; /* Tamanho da fonte ajustado */
-    font-weight: 400; /* Peso da fonte ajustado */
-    line-height: 1.5; /* Aumenta a altura da linha para melhor leitura */
-    color: #222222; /* Cor de texto mais escura */
-    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; /* Transições suaves */
-  
-    &:hover {
-      background-color: #f0f0f0; /* Cor de fundo mais clara para o efeito hover */
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Sombra mais intensa para destacar o hover */
-      transform: scale(1.05); /* Efeito de zoom mais visível */
-    }
-  
-    h1 {
-      text-align: center;
-      margin: 0; /* Remove a margem padrão do h1 */
-      font-size: 24px; /* Ajusta o tamanho da fonte do h1 */
-      font-weight: 600; /* Aumenta o peso da fonte do h1 */
-    }
-  }
-  .plus-icon {
-    display: flex;
-    justify-content: center; 
-    align-items: center; /* Centraliza o ícone verticalmente */
-    color: #474545; /* Cor do ícone */
-    cursor: pointer; /* Indica que o ícone é clicável */
-    font-size: 2rem; /* Ajusta o tamanho do ícone */
-    margin: 0 auto; /* Centraliza horizontalmente o contêiner do ícone */
-  }
-  
-  .plus-icon1 {
-    height: 150px; /* Ajusta a altura do contêiner do ícone */
-    width: 150px;
-    margin-top: -0px;
-  }
+.sub-header-content {
+  display: flex; /* Alinha os itens horizontalmente */
+  justify-content: space-between; /* Distribui o espaço entre os itens */
+  align-items: center; /* Alinha verticalmente os itens ao centro */
+  width: 100%; /* Ocupa toda a largura disponível */
+  height: 60px; /* Altura ajustada para acomodar o conteúdo */
+  background: #ffffff; /* Fundo branco para cada item */
+  border-radius: 8px; /* Bordas arredondadas para os itens */
+  padding: 0 10px; /* Padding horizontal para espaçamento interno */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave ao redor do componente */
+  margin: 0; /* Remove margens padrão */
+  border: 1px solid #e0e0e0; /* Borda sutil para um visual mais moderno */
+}
+
+.sub-header-item {
+  flex: 1; /* Ocupa o mesmo espaço para cada item */
+  text-align: center; /* Alinha o texto ao centro */
+  font-size: 14px; /* Tamanho da fonte ajustado */
+  color: #333; /* Cor do texto */
+  font-weight: 500; /* Peso da fonte ajustado para destaque */
+  padding: 10px 0; /* Padding vertical para espaçamento interno */
+  border-radius: 4px; /* Borda arredondada para cada item */
+  transition: background 0.3s, box-shadow 0.3s; /* Transições suaves para efeitos de hover */
+}
+
+.sub-header-item:hover {
+  background: #f1f1f1; /* Fundo suave ao passar o mouse */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Aumenta a sombra no hover */
+}
+
+.sub-header-item:first-child {
+  border-left: none; /* Remove a borda esquerda do primeiro item */
+}
+
+.sub-header-item:last-child {
+  border-right: none; /* Remove a borda direita do último item */
+}

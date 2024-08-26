@@ -4,9 +4,11 @@
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
   margin-top: 20px; /* Ajuste o margin-top para evitar sobreposição */
   margin-left: auto;
-  margin-right: 2%;
+
   overflow: hidden;
-  max-width: 82%; /* Limita a largura máxima */
+  margin-right: 1%;
+    /* Ajuste a largura para ser responsiva */
+    max-width: 83.5%; /* Limita a largura máxima */
   height: 680px; /* Define a altura mínima */
   padding: 20px; /* Adiciona padding para espaçamento interno */
   box-sizing: border-box; /* Inclui o padding e a borda no cálculo da largura e altura */

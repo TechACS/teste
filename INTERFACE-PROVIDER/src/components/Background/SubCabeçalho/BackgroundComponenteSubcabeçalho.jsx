@@ -1,11 +1,11 @@
 import React from 'react'
-
-function BackgroundComponenteSubcabeçalho() {
+import './BackgroundComponenteSubcabeçalho.scss';
+function BackgroundComponenteSubcabeçalho( {children} ) {
   return (
     <div>
           <div className='subcabecalho'>
-
-</div>
+          {children}
+         </div>
     </div>
   )
 }
