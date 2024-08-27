@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import './CadastrarClient.scss';
-import FormButtons from '../../BUTTONS/FormButtons.jsx';
-const CadastrarClient = () => {
+import FormButtons2 from '../../BUTTONS/FormButton'; // Certifique-se de que o caminho está correto
+
+const CadastrarClient = ({ onCancel }) => { // Recebe onCancel como prop
   const [formData, setFormData] = useState({
     nome: '',
     cpf: '',
@@ -179,9 +180,8 @@ const CadastrarClient = () => {
             </div>
           </div>
         </div>
-        
-                <FormButtons></FormButtons>{/* Botões removidos aqui */}
 
+        <FormButtons2 onCancel={onCancel} /> {/* Passando a prop onCancel */}
       </form>
     </div>
   );

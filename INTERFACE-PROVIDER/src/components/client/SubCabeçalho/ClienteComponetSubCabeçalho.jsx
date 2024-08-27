@@ -6,17 +6,24 @@ import CadastrarClient from '../CadastrarClient/CadastrarClient';
 import ClienteComponentecabecalho from '../Cabeçalho/ClienteComponetCabeçalho';
 
 const ClienteComponet = () => {
-  const [newClient, setNewClient] = useState("");
+  const [view, setView] = useState("list");
 
-  const botaoClicado = (id) => {
-    setNewClient(id);
+  const handleCancel = () => {
+    setView("list");
+  };
+
+  const handleAddClient = () => {
+    setView("form");
   };
 
   return (
     <div>
-      <ClienteComponentecabecalho newClient={newClient} botaoClicado={botaoClicado} />
+      <ClienteComponentecabecalho newClient={view === "form"} botaoClicado={handleAddClient} />
       <BackgroundComponenteSubcabeçalho>
-        {newClient === "clicado" ? <CadastrarClient/> : <ClientList/>}
+        {view === "form" ? 
+          <CadastrarClient onCancel={handleCancel} /> 
+          : <ClientList />
+        }
       </BackgroundComponenteSubcabeçalho>
     </div>
   );
