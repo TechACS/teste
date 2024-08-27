@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { fetchClients } from '../../../services/authService'; // Importe a função de API
+import { fetchClients  } from '../../../services/authService'; // Importe a função de API
 import './ClientList.scss'; // Adicione seus estilos aqui
 
 const ClientList = () => {
@@ -37,7 +37,6 @@ const ClientList = () => {
         <div key={client._id} className="client-item">
           
           <div className="client-data">{client.name}</div>
-          
           <div className="client-data">{client.email}</div>
           <div className="client-data">{client.cpf}</div>
           <div className="client-data">{client.phone}</div>

@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus, faFileExcel } from '@fortawesome/free-solid-svg-icons';
 import PropTypes from 'prop-types'; // Não se esqueça de importar PropTypes
 import { searchClients } from '../../../services/authService'; // Importe a função de API
-
+import ExportToExcelButton from '../../ExportToExcelButton/ExportToExcelButton';
 const ClienteComponetecabecalho = ({ newClient, botaoClicado }) => {
   const [searchTerm, setSearchTerm] = useState('');
   const [clients, setClients] = useState([]);
@@ -64,8 +64,7 @@ const ClienteComponetecabecalho = ({ newClient, botaoClicado }) => {
         </div>
 
         <div className="header-item export-container">
-          <FontAwesomeIcon icon={faFileExcel} className="icon" />
-          <span className="text">Exportar para Excel</span>
+          <ExportToExcelButton></ExportToExcelButton>
         </div>
       </div>
     </BackgroundComponente>
