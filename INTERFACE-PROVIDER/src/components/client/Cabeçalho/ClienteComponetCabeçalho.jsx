@@ -39,15 +39,17 @@ const ClienteComponetecabecalho = ({ newClient, botaoClicado }) => {
   return (
     <BackgroundComponente>
       <div className="header-content">
-        <div className="header-item add-client-container">
+        <div   className="header-item add-client-container">
+        <div  className={newClient === "clicado" ? "ativo" : ""}
+            onClick={() => botaoClicado("clicado")} >
           <FontAwesomeIcon icon={faPlus} className="icon" />
-          <span 
-            className={newClient === "clicado" ? "ativo" : ""}
-            onClick={() => botaoClicado("clicado")}
-          >
+          <span >
             Cadastrar Cliente
           </span>
         </div>
+
+        </div>
+       
 
         <div className="header-item search-container">
           <input 
