@@ -2,10 +2,10 @@
   display: flex;
   justify-content: space-between; /* Ajusta o espaçamento entre os itens */
   align-items: center; /* Alinha verticalmente os itens ao centro */
-  margin: 2% 5%; /* Espaçamento superior e lateral */
+  margin: 0.6% 5%; /* Espaçamento superior e lateral */
   background: #ffffff; /* Fundo branco para o container */
   border-radius: 8px; /* Bordas arredondadas */
-  padding: 10px; /* Padding geral para espaçamento interno */
+  padding: 0px; /* Padding geral para espaçamento interno */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave ao redor do container */
 }
 
@@ -97,7 +97,7 @@
 .header-content {
   display: flex;
   justify-content: space-between;
-  padding: 20px;
+  padding: 10px;
   background-color: #f4f4f4;
   border-bottom: 1px solid #ddd;
 }
