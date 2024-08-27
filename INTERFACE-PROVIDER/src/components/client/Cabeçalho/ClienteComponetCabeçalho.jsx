@@ -15,7 +15,13 @@ function ClienteComponet() {
   const searchClientsByQuery = async (term) => {
     setLoading(true);
     setError(null);
+
+    console.log('Buscando clientes com o termo:', term); // Verifique se o termo está correto
+
     const result = await searchClients(term);
+    
+    console.log('Resultado da busca:', result); // Verifique o resultado da busca
+
     if (result.success) {
       setClients(result.data);
     } else {
