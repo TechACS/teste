@@ -8,9 +8,7 @@ function Cliente() {
   return (
     <div >
 
-      <ClienteComponetcabecalho>
-       
-      </ClienteComponetcabecalho>
+      
       <ClienteComponet>
         
       </ClienteComponet>

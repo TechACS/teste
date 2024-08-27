@@ -37,6 +37,7 @@ const ClientList = () => {
         <div key={client._id} className="client-item">
           
           <div className="client-data">{client.name}</div>
+          
           <div className="client-data">{client.email}</div>
           <div className="client-data">{client.cpf}</div>
           <div className="client-data">{client.phone}</div>
