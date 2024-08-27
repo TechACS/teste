@@ -16,6 +16,8 @@ export const loginUser = async (email, password) => {
     const data = await response.json();
 
     if (response.ok) {
+      // Armazene o token no localStorage após o login
+      localStorage.setItem('token', data.token);
       return { success: true, data };
     } else {
       return { success: false, data, status: response.status };
@@ -29,7 +31,7 @@ export const loginUser = async (email, password) => {
 // Função para buscar todos os clientes
 export const fetchClients = async () => {
   try {
-    const token = localStorage.getItem('token'); // Ou outro local onde o token está armazenado
+    const token = localStorage.getItem('token'); // Obtenha o token do localStorage
     const response = await fetch(API_URL2, {
       method: 'GET',
       headers: {
@@ -54,9 +56,7 @@ export const fetchClients = async () => {
 // Função para buscar clientes com base na consulta
 export const searchClients = async (query) => {
   try {
-    const token = localStorage.getItem('token'); // Ou outro local onde o token está armazenado
-
-    console.log('Consultando a URL:', `${SEARCH_API_URL}?query=${encodeURIComponent(query)}`); // Verifique a URL da solicitação
+    const token = localStorage.getItem('token'); // Obtenha o token do localStorage
 
     const response = await fetch(`${SEARCH_API_URL}?query=${encodeURIComponent(query)}`, {
       method: 'GET',

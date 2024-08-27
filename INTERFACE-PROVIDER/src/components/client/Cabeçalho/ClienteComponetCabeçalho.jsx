@@ -65,6 +65,24 @@ function ClienteComponet() {
             <span className="text">Exportar para Excel</span>
           </div>
         </div>
+        <div className="client-list">
+      <div className="header">
+        
+        <div className="header-item">Nome</div>
+        <div className="header-item">Email</div>
+        <div className="header-item">CPF</div>
+        <div className="header-item">TELEFONE</div>
+      </div>
+      {clients.map(client => (
+        <div key={client._id} className="client-item">
+          
+          <div className="client-data">{client.name}</div>
+          <div className="client-data">{client.email}</div>
+          <div className="client-data">{client.cpf}</div>
+          <div className="client-data">{client.phone}</div>
+        </div>
+      ))}
+    </div>
         {/* Renderize a lista de clientes ou outro conteúdo conforme necessário */}
       </BackgroundComponente>
     </div>
