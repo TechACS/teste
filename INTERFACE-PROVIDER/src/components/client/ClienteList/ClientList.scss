@@ -1,0 +1,68 @@
+.client-list {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  background: #f5f5f5; /* Fundo claro */
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Sombra mais pronunciada */
+  
+  
+}
+
+.header {
+  display: flex;
+  justify-content: space-between; /* Espaçamento entre os itens */
+  align-items: center;
+  background: #ffffff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  margin-bottom: 20px; /* Espaçamento abaixo do cabeçalho */
+  font-size: 16px;
+  gap: 10px;
+}
+
+.header-item {
+  flex: 1;
+  gap: 10px;
+  text-align: center; /* Centraliza o texto */
+  font-weight: 600; /* Destaca o texto do cabeçalho */
+  color: #555; /* Cor do texto */
+}
+
+.client-item {
+  display: flex;
+  justify-content: space-between; /* Espaçamento entre os itens */
+  align-items: center;
+  background: #ffffff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  margin-bottom: 15px; /* Espaçamento abaixo de cada item */
+  transition: background 0.3s ease, transform 0.3s ease;
+  cursor: pointer; /* Adiciona cursor pointer */
+}
+
+.client-item:hover {
+  background: #e0f7fa; /* Cor de fundo ao passar o mouse */
+  transform: translateY(-2px); /* Levanta o item ao passar o mouse */
+}
+
+.client-data {
+  flex: 1;
+  text-align: center; /* Centraliza o texto */
+  font-size: 15px;
+  color: #333;
+}
+
+.loading {
+  text-align: center;
+  font-size: 18px;
+  color: #00796b; /* Cor moderna para o carregamento */
+}
+
+.error {
+  text-align: center;
+  font-size: 18px;
+  color: #d32f2f; /* Cor para o erro */
+}

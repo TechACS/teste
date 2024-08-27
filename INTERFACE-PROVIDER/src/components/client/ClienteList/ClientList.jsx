@@ -21,16 +21,17 @@ const ClientList = () => {
     loadClients();
   }, []);
 
-  if (loading) return <div>Loading...</div>;
-  if (error) return <div>{error}</div>;
+  if (loading) return <div className="loading">Carregando...</div>;
+  if (error) return <div className="error">{error}</div>;
 
   return (
     <div className="client-list">
       <div className="header">
-        <div className="header-item">ID</div>
+        
         <div className="header-item">Nome</div>
         <div className="header-item">Email</div>
         <div className="header-item">CPF</div>
+        <div className="header-item">TELEFONE</div>
       </div>
       {clients.map(client => (
         <div key={client._id} className="client-item">

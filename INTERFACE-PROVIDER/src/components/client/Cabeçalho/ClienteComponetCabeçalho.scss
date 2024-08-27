@@ -2,12 +2,11 @@
   display: flex;
   justify-content: space-between; /* Ajusta o espaçamento entre os itens */
   align-items: center; /* Alinha verticalmente os itens ao centro */
- margin-right: 5%;
- margin-left: 5%;
-margin-top: 2%;
-  background: #ffffff;
-
-  border-radius: 8px;
+  margin: 2% 5%; /* Espaçamento superior e lateral */
+  background: #ffffff; /* Fundo branco para o container */
+  border-radius: 8px; /* Bordas arredondadas */
+  padding: 10px; /* Padding geral para espaçamento interno */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave ao redor do container */
 }
 
 .header-item {
@@ -15,47 +14,64 @@ margin-top: 2%;
   align-items: center;
   justify-content: center; /* Alinha o conteúdo ao centro */
   gap: 10px;
-  box-shadow: 0 2px 10px 2px rgba(0, 0, 0, 0.1); /* Leve sombra ao redor de cada item */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Leve sombra ao redor de cada item */
   padding: 10px;
-  border-radius: 8px; /* Borda arredondada para os itens */
+  border-radius: 8px; /* Bordas arredondadas para os itens */
   background: #ffffff; /* Fundo branco para cada item */
   transition: box-shadow 0.3s, transform 0.3s; /* Transições suaves para efeitos de hover */
 }
 
 .header-item:hover {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Aumenta a sombra no hover */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Aumenta a sombra no hover */
   transform: translateY(-2px); /* Adiciona um efeito de levantamento */
 }
 
-.add-client-container {
-  width: 10; /* Largura específica */
+.add-client-container,
+.export-container {
+  width: 150px; /* Largura específica */
   height: 60px; /* Altura específica */
   flex: 0 0 auto; /* Não se expande ou contrai */
 }
 
 .search-container {
-  width: 50%; /* Largura específica */
-  flex: 0 0 auto; /* Não se expande ou contrai */
+  flex: 1; /* Ocupa o espaço restante */
+  position: relative; /* Para posicionar a mensagem de carregamento/erro */
 }
 
 .search-input {
-  border: 1px solid #ccc; /* Adiciona uma borda leve */
+  border: 1px solid #ccc; /* Borda leve */
   border-radius: 8px;
   padding: 8px; /* Padding ajustado */
   width: 100%;
   font-size: 14px; /* Tamanho da fonte ajustado */
   outline: none; /* Remove o contorno padrão */
-  transition: border-color 0.3s, box-shadow 0.3s;
+  transition: border-color 0.3s, box-shadow 0.3s; /* Transições suaves */
 }
+
 .search-input:focus {
   border-color: #007bff; /* Cor da borda ao focar no campo */
   box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Sombra suave ao redor do campo de busca */
 }
 
+.loading-text,
+.error-text {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  font-size: 14px;
+  color: #999; /* Cor padrão */
+}
+
+.error-text {
+  color: #dc3545; /* Cor do texto de erro */
+}
+
 .export-container {
-  width: 10; /* Largura específica */
-  height: 60px; /* Altura específica */
-  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
 }
 
 .icon {
@@ -69,7 +85,7 @@ margin-top: 2%;
 }
 
 .stats-container {
-  flex: 1; /* Ocupa espaço restante se necessário */
+  flex: 1; /* Ocupa o espaço restante se necessário */
 }
 
 /* Opcional: Adiciona espaçamento e formatação ao texto do total de clientes */
