@@ -1,0 +1,34 @@
+.form-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px; // Espaçamento entre os botões
+  
+    .btn {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px; // Bordas mais arredondadas
+      color: #fff;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.3s; // Transições suaves
+  
+      &.salvar {
+        background: #28a745;
+  
+        &:hover {
+          background: #218838; // Cor do botão ao passar o mouse
+          transform: scale(1.05); // Efeito de zoom suave
+        }
+      }
+  
+      &.sair {
+        background: #dc3545;
+  
+        &:hover {
+          background: #c82333; // Cor do botão ao passar o mouse
+          transform: scale(1.05); // Efeito de zoom suave
+        }
+      }
+    }
+  }
+  

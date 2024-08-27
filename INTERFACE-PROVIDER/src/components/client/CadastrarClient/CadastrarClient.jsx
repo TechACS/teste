@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './CadastrarClient.scss';
-
+import FormButtons from '../../BUTTONS/FormButtons.jsx';
 const CadastrarClient = () => {
   const [formData, setFormData] = useState({
     nome: '',
@@ -179,11 +179,9 @@ const CadastrarClient = () => {
             </div>
           </div>
         </div>
+        
+                <FormButtons></FormButtons>{/* Botões removidos aqui */}
 
-        <div className="form-actions">
-          <button type="submit" className="btn salvar">Salvar</button>
-          <button type="button" className="btn sair">Sair</button>
-        </div>
       </form>
     </div>
   );
