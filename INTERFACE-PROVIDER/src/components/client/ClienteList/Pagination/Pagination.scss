@@ -1,0 +1,47 @@
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    margin-top: 30px;
+    width: 100%;
+    gap: 150px;
+  
+    // Estilizando os botões
+    button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 15px;
+      margin: 0 5px;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: bold;
+      transition: background-color 0.3s, transform 0.3s;
+  
+      // Efeito de hover
+      &:hover {
+        background-color: #0056b3;
+        transform: scale(1.05);
+      }
+  
+      // Efeito de botão desativado
+      &:disabled {
+        background-color: #ccc;
+        cursor: not-allowed;
+        color: #666;
+        box-shadow: none;
+      }
+    }
+  
+    // Estilizando o texto de paginação
+    span {
+      font-size: 16px;
+      color: #333;
+    }
+  }
+  
