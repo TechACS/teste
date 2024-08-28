@@ -9,9 +9,8 @@ import LoginPage from './routes/LOGIN/LoginPage';
 import App from './App';
 import ProtectedRoute from './components/Login/ProtectedRoute';
 
-
 import Cliente from './routes/Client/Cliente';
-
+import EditClient from './components/client/EditClient/EditClient';
 const router = createBrowserRouter([
   {
     path: '/login',
@@ -31,6 +30,10 @@ const router = createBrowserRouter([
         path: 'Cliente',
         element: <ProtectedRoute element={<Cliente />} />, // Protege a rota /home
       },
+      {
+        path: 'Editclient/id',
+        element: <ProtectedRoute element={<EditClient  />} /> ,
+      }
       // Adicione outras rotas protegidas aqui
     ],
   },
@@ -38,6 +41,7 @@ const router = createBrowserRouter([
     path: '*',
     element: <Navigate to="/login" replace />, // Redireciona para a página de login
   },
+
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
