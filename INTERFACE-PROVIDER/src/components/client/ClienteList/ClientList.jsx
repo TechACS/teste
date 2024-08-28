@@ -19,7 +19,7 @@ const ClientList = ({ clients, currentPage, itemsPerPage }) => {
       </div>
       
           {currentClients.map(client => (
-            <Link to={/EditClient/id}> 
+            <Link to='/EditClient/id'> 
             <div key={client._id} className="client-item">
             
               <div className="client-data">{client.name}</div>
