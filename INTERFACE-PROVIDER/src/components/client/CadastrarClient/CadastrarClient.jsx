@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import './CadastrarClient.scss';
 import FormButtons2 from '../../BUTTONS/FormButton'; // Certifique-se de que o caminho está correto
+import { cadastrarClient } from '../../../services/cadastrarClient';
 
-const CadastrarClient = ({ onCancel }) => { // Recebe onCancel como prop
+const CadastrarClient = ({ onCancel }) => {
   const [formData, setFormData] = useState({
     nome: '',
     cpf: '',
@@ -25,9 +26,40 @@ const CadastrarClient = ({ onCancel }) => { // Recebe onCancel como prop
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Adicionar lógica de envio de formulário aqui
+
+    // Enviar os dados conforme esperado pelo backend
+    const result = await cadastrarClient(
+      formData.nome,
+      formData.cpf,
+      formData.email,
+      formData.celular,
+      formData.rg,
+      formData.cnpj,
+      formData.dataNascimento,
+      formData.residenciaNumero, // Assumido que é o bairro
+      formData.residenciaNumero  // Assumido que é o numbhome
+    );
+
+    if (result.success) {
+      alert(result.message);
+      setFormData({
+        nome: '',
+        cpf: '',
+        rg: '',
+        cnpj: '',
+        dataNascimento: '',
+        celular: '',
+        email: '',
+        observacoes: '',
+        residenciaNumero: '',
+        residenciaComplemento: '',
+        residenciaObservacoes: '',
+      });
+    } else {
+      alert(result.error);
+    }
   };
 
   return (
@@ -133,7 +165,7 @@ const CadastrarClient = ({ onCancel }) => { // Recebe onCancel como prop
               />
             </div>
             <div className="input-group-item">
-              <label htmlFor="emailObservacoes">Observações</label>
+              <label htmlFor="emailObservacoes">Observações sobre o email</label>
               <input
                 type="text"
                 id="emailObservacoes"
