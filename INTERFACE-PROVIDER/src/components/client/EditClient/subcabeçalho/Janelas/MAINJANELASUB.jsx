@@ -1,25 +1,36 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './MAIN.scss';
-import Geral from './GERAL/Geral';
-import Observações from './OBSERVAÇÃO/Observações';
-import Dispositivos from './DISPOSITIVOS/Dispositivos';
 import GeralComponent from './GERAL/GeralComponent';
+import ObservaçõesComponent from './OBSERVAÇÃO/ObservaçõesComponents';
+import DispositivosComponent from './DISPOSITIVOS/DispositivosComponets';
+import ButtonJanelaComponent from '../components/janelasButton/ButtonJanelaComponent';
 
 function MAINJANELA() {
+  const [activeComponent, setActiveComponent] = useState(null);
+
+  const showGeral = () => setActiveComponent(<GeralComponent />);
+  const showObservações = () => setActiveComponent(<ObservaçõesComponent />);
+  const showDispositivos = () => setActiveComponent(<DispositivosComponent />);
+
   return (
     <div className='mainjanela'>
       <div className='mainjanelasub-components'>
-        <div className='component-container'>
-          <Geral />
-        </div>
-        <div className='component-container'>
-          <Observações />
-        </div>
-        <div className='component-container'>
-          <Dispositivos />
-        </div>
+        <ButtonJanelaComponent
+          descrição='Geral'
+          botaoClicado={showGeral}
+        />
+        <ButtonJanelaComponent
+          descrição='Observações'
+          botaoClicado={showObservações}
+        />
+        <ButtonJanelaComponent
+          descrição='Dispositivos'
+          botaoClicado={showDispositivos}
+        />
       </div>
-      <GeralComponent></GeralComponent>
+      <div className='active-component'>
+        {activeComponent}
+      </div>
     </div>
   );
 }

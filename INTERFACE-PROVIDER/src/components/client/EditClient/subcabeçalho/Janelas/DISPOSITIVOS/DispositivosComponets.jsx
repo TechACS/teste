@@ -5,7 +5,7 @@ function DispositivosComponets() {
   return (
     <div className='DispositivosComponets'>
           <JanelasBackground>
-            <h1>csdcdc</h1>
+            <h1>csdcv cxvcvvccdc</h1>
           </JanelasBackground>
     </div>
   )
