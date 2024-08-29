@@ -1,9 +1,13 @@
 import React from 'react'
+import ButtonJanelaComponent from '../../components/janelasButton/ButtonJanelaComponent.jsx';
 
 function Geral() {
   return (
     <div>
-        <h1>GERAL</h1>
+       <ButtonJanelaComponent
+       descrição='Geral'
+       ></ButtonJanelaComponent>
+       
     </div>
   )
 }

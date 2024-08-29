@@ -5,7 +5,7 @@ function Dispositivos() {
     <div>
        
         <ButtonJanelaComponent
-        descrição='sdcsdc'
+        descrição='Dispositivos'
         ></ButtonJanelaComponent>
     </div>
   )

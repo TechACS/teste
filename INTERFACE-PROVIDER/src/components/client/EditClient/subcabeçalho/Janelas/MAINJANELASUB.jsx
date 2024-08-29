@@ -3,6 +3,7 @@ import './MAIN.scss';
 import Geral from './GERAL/Geral';
 import Observações from './OBSERVAÇÃO/Observações';
 import Dispositivos from './DISPOSITIVOS/Dispositivos';
+import GeralComponent from './GERAL/GeralComponent';
 
 function MAINJANELA() {
   return (
@@ -18,7 +19,7 @@ function MAINJANELA() {
           <Dispositivos />
         </div>
       </div>
-      <hr />
+      <GeralComponent></GeralComponent>
     </div>
   );
 }

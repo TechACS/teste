@@ -1,11 +1,11 @@
 import React from 'react'
-
+import ButtonJanelaComponent from '../../components/janelasButton/ButtonJanelaComponent.jsx';
 function Observações() {
   return (
     <div>
-        <h1>
-            Observações
-        </h1>
+        <ButtonJanelaComponent
+       descrição='Geral'
+       ></ButtonJanelaComponent>
     </div>
   )
 }
