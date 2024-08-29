@@ -1,9 +1,9 @@
 import React from 'react'
 import './JanelasBackground.scss'
-function JanelasBackground() {
+function JanelasBackground( {children}) {
   return (
     <div className='janelasBackground'>
-
+         {children}
 
     </div>
   )

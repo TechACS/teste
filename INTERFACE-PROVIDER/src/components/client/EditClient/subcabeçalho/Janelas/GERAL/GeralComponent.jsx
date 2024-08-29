@@ -4,7 +4,12 @@ import JanelasBackground from '../../components/janelasBackground/janelasBackgro
 function GeralComponent() {
   return (
     <div className='GeralComponent'>
-     <JanelasBackground></JanelasBackground>
+     <JanelasBackground>
+      <div>
+      <h1>csdcsdc</h1>
+      
+      </div>
+     </JanelasBackground>
     </div>
   )
 }
