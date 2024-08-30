@@ -1,12 +1,16 @@
 .janelasBackground{
     width: 100%;
     padding: 10px;
-    margin: 0px;
+   
     box-sizing: border-box;
     background: rgba(245, 245, 245, 0.1); /* Fundo claro com 70% de opacidade */
-    border-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Sombra mais pronunciada */
-    height: 900%;
+    height: 700px;
+    border-left: 1px solid #d3d1d1;
+    border-bottom: 1px solid #d3d1d1;
+    border-right: 1px solid #d3d1d1;
     
 }
 

@@ -7,7 +7,22 @@ function GeralComponent() {
      <JanelasBackground>
       <div>
       <h1>csdcsdc</h1>
-      
+      <h1>csdcsdc</h1>
+      <h1>csdcsdc</h1>
+      <h1>csdcsdc</h1>
+      <h1>csdcsdc</h1>
+      <h1>csdcsdc</h1>
+      <h1>csdcsdc</h1>
+      <h1>csdcsdc</h1>
+      <h1>csdcsdc</h1>
+      <h1>csdcsdc</h1>
+      <h1>csdcsdc</h1>
+      <h1>csdcsdc</h1>
+      <h1>csdcsdc</h1>
+      <h1>csdcsdc</h1>
+      <h1>csdcsdc</h1>
+      <h1>csdcsdc</h1>
+    
       </div>
      </JanelasBackground>
     </div>
