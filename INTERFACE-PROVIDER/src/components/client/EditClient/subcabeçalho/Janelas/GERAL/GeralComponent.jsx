@@ -7,7 +7,7 @@ const GeralComponent = () => {
   const { cpf } = useParams();
 
   const handleCancel = () => {
-    // Navegar de volta ou realizar outra ação ao cancelar
+    window.history.back(); 
   };
 
   return (

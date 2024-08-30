@@ -75,10 +75,10 @@ const InfoClient = ({ cpf, onCancel }) => {
 
   return (
     <div className="cadastrar-client">
-      <h1 className="title">EDITAR CLIENTE</h1>
+      
       <form onSubmit={handleSubmit}>
         <div className="section geral">
-          <h2 className="section-title">GERAL</h2>
+          <h2 className="section-title">Informações</h2>
           <div className="form-group">
             <label htmlFor="nome">Nome</label>
             <input
