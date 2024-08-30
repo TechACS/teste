@@ -31,9 +31,10 @@ const router = createBrowserRouter([
         element: <ProtectedRoute element={<Cliente />} />, // Protege a rota /home
       },
       {
-        path: 'Editclient/id',
-        element: <ProtectedRoute element={<EditClient  />} /> ,
+        path: 'EditClient/:cpf',
+        element: <ProtectedRoute element={<EditClient />} />,
       }
+      
       // Adicione outras rotas protegidas aqui
     ],
   },
