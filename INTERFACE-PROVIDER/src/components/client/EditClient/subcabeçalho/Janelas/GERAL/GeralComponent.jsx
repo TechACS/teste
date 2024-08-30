@@ -11,22 +11,8 @@ function GeralComponent() {
     <div className='GeralComponent'>
      <JanelasBackground>
       <div>
-      <h1>csdcsdc</h1>
-      <h1>csdcsdc</h1>
-      <h1>csdcsdc</h1>
-      <h1>csdcsdc</h1>
-      <h1>csdcsdc</h1>
-      <h1>csdcsdc</h1>
-      <h1>csdcsdc</h1>
-      <h1>csdcsdc</h1>
-      <h1>csdcsdc</h1>
-      <h1>csdcsdc</h1>
-      <h1>csdcsdc</h1>
-      <h1>csdcsdc</h1>
-      <h1>csdcsdc</h1>
-      <h1>csdcsdc</h1>
-      <h1>csdcsdc</h1>
-      <h1>csdcsdc</h1>
+      
+      COLOCAR O ESQUELETO DE EDITAR E LISTAR AS INFOMACOES AQUI 
     
       </div>
      </JanelasBackground>
