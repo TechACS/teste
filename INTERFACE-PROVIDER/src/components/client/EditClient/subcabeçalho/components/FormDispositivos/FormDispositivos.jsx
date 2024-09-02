@@ -188,51 +188,26 @@ const FormDispositivos = ({ onCancel }) => {
           </div>
 
           <div className='FormDispositivos-3'>
-            <div className='FormDispositivos-3-1'>
+            <div className='FormDispositivos-3-1-btn'>
               <div className='FormDispositivos-3-2'>
-                <h1>Name SSID 2.4G</h1>
-                <input 
-                  type="text" 
-                  name="ssid24GName2"
-                  placeholder="Digite o nome da rede 2.4G" 
-                  value={formData.ssid24GName2}
-                  onChange={handleChange} 
-                />
+                
+                <button>Listar Dispositivos</button>
               </div>
 
               <div className='FormDispositivos-3-2'>
-                <h1>Password 2.4G</h1>
-                <input 
-                  type="text" 
-                  name="ssid24GPassword2"
-                  placeholder="Digite a Senha SSID 2.4G" 
-                  value={formData.ssid24GPassword2}
-                  onChange={handleChange} 
-                />
+                
+                <button>Associar Dispositivo</button>
               </div>
             </div>
 
             <div className='FormDispositivos-3-1'>
               <div className='FormDispositivos-3-2'>
-                <h1>Name SSID 5G</h1>
-                <input 
-                  type="text" 
-                  name="ssid5GName2"
-                  placeholder="Digite o nome da rede 5G" 
-                  value={formData.ssid5GName2}
-                  onChange={handleChange} 
-                />
+                
+               <button>Desassociar Dispositivos</button>
               </div>
 
               <div className='FormDispositivos-3-2'>
-                <h1>Password 5G</h1>
-                <input 
-                  type="text" 
-                  name="ssid5GPassword2"
-                  placeholder="Digite a Senha SSID 5G" 
-                  value={formData.ssid5GPassword2}
-                  onChange={handleChange} 
-                />
+                <button>Configurações avançadas</button>
               </div>
             </div>
           </div>
