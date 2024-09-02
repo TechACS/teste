@@ -64,6 +64,7 @@ const FormObservações = ({ onCancel }) => {
         <div className="form-actions">
         <FormButtons2 onCancel={onCancel} />
         </div>
+        
       </form>
     </div>
   );
