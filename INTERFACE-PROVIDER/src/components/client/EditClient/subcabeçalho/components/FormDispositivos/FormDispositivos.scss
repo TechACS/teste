@@ -1,21 +1,105 @@
-
-
-.FormDispositivos-1{
-    background-color: aquamarine;
-    display: flex;
-    justify-content: center;
-    
-}
-
-.FormDispositivos-2{
-    background-color: aquamarine;
-    display: flex;
-    justify-content: center;
+.FormDispositivos {
+    width: 100%;
+    margin: 20px auto;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
   
-    
- 
-    .FormDispositivos-2-1{
-        
-       
+    .FormDispositivos-1 {
+      width: 100%;
+      background: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+      margin: 20px auto;
+      padding: 15px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+  
+      .FormDispositivos-1-1 {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+  
+        h1 {
+          font-size: 1.125rem; /* Tamanho do título reduzido */
+          margin-bottom: 8px;
+          color: #333;
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+  
+        input {
+          width: 100%;
+          padding: 10px; /* Padding reduzido */
+          font-size: 0.875rem; /* Tamanho da fonte do input reduzido */
+          border: 1px solid #ddd;
+          border-radius: 6px;
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+          transition: all 0.3s ease;
+  
+          &:focus {
+            border-color: #007bff;
+            box-shadow: 0 0 6px rgba(0, 123, 255, 0.25);
+            outline: none;
+          }
+  
+          &::placeholder {
+            color: #aaa;
+          }
+        }
+      }
     }
-}
+  
+    .FormDispositivos-2 {
+      width: 100%;
+      background: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+      margin: 20px auto;
+      padding: 15px;
+      display: flex;
+      justify-content: space-between;
+      gap: 15px;
+  
+      .FormDispositivos-2-1 {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        gap: 15px;
+  
+        .FormDispositivos-2-2 {
+          display: flex;
+          flex-direction: column;
+  
+          h1 {
+            font-size: 1.125rem; /* Tamanho do título reduzido */
+            margin-bottom: 8px;
+            color: #333;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          }
+  
+          input {
+            width: 100%;
+            padding: 10px; /* Padding reduzido */
+            font-size: 0.875rem; /* Tamanho da fonte do input reduzido */
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+  
+            &:focus {
+              border-color: #007bff;
+              box-shadow: 0 0 6px rgba(0, 123, 255, 0.25);
+              outline: none;
+            }
+  
+            &::placeholder {
+              color: #aaa;
+            }
+          }
+        }
+      }
+    }
+  }
+  
