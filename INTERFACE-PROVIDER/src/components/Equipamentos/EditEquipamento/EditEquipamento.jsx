@@ -1,17 +1,17 @@
 import React from 'react'
-import './EditClient.scss';
+import './EditEquipamento.scss';
 
-import EditclientCabeçalho from './Cabeçalho/editclientCabeçalho';
+import ClienteComponetCabeçalho from './Cabeçalho/ComponentCabeçalho';
 import EditclientSubcabeçalho from './subcabeçalho/editclientSubcabeçalho';
 
-function EditClient({childrem}) {
+function EditEquipamento({childrem}) {
   return (
     <div className='teste'>
-    <EditclientCabeçalho>{childrem}</EditclientCabeçalho>
+    <ClienteComponetCabeçalho>{childrem}</ClienteComponetCabeçalho>
     <EditclientSubcabeçalho></EditclientSubcabeçalho>
       
     </div>
   )
 }
 
-export default EditClient
+export default EditEquipamento
