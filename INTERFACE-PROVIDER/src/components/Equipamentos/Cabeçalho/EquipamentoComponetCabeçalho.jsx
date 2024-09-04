@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './ClienteComponetCabeçalho.scss';
+import './EquipamentoComponetCabeçalho.scss';
 import BackgroundComponente from '../../Background/Cabeçalho/BackgroundComponenteCabeçalho';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus, faFileExcel } from '@fortawesome/free-solid-svg-icons';
@@ -22,7 +22,7 @@ const ClienteComponetecabecalho = ({ newClient, botaoClicado }) => {
     if (result.success) {
       setClients(result.data);
     } else {
-      setError(result.error || 'Erro ao buscar clientes');
+      setError(result.error || 'Erro ao buscar equipamentos');
     }
     setLoading(false);
   };
@@ -54,7 +54,7 @@ const ClienteComponetecabecalho = ({ newClient, botaoClicado }) => {
         <div className="header-item search-container">
           <input 
             type="text" 
-            placeholder="Buscar clientes..." 
+            placeholder="Buscar equipamentos..." 
             className="search-input"
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}

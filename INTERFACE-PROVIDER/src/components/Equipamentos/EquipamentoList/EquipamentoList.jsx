@@ -1,5 +1,5 @@
 import React from 'react';
-import './ClientList.scss';
+import './EquipamentoList.scss';
 import { Link } from 'react-router-dom';
 
 const ClientList = ({ clients, currentPage, itemsPerPage }) => {
@@ -11,10 +11,10 @@ const ClientList = ({ clients, currentPage, itemsPerPage }) => {
   return (
     <div className="client-list">
       <div className="header">
-        <div className="header-item">Nome</div>
-        <div className="header-item">Email</div>
-        <div className="header-item">CPF</div>
-        <div className="header-item">Telefone</div>
+        <div className="header-item">Serial</div>
+        <div className="header-item">PPPOE</div>
+        <div className="header-item">IP</div>
+        <div className="header-item">Modelo</div>
       </div>
       
       {currentClients.map(client => (

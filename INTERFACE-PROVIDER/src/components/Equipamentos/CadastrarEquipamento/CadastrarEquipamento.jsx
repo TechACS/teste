@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './CadastrarClient.scss';
+import './CadastrarEquipamento.scss';
 import FormButtons2 from '../../BUTTONS/FormButton'; // Certifique-se de que o caminho está correto
 import { cadastrarClient } from '../../../services/cadastrarClient';
 
@@ -64,7 +64,7 @@ const CadastrarClient = ({ onCancel }) => {
 
   return (
     <div className="cadastrar-client">
-      <h1 className="title">CADASTRAR CLIENTE</h1>
+      <h1 className="title">dgb</h1>
       <form onSubmit={handleSubmit}>
         <div className="section geral">
           <h2 className="section-title">GERAL</h2>
