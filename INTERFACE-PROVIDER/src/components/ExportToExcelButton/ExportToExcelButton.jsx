@@ -19,22 +19,37 @@ const ExportToExcelButton = () => {
         const clients = result.data;
 
         // Adapta os dados conforme necessário para exportação
-        const adaptedData = clients.flatMap(client => 
-          client.equipamentos.map(equipamento => ({
-            Nome: client.name,
-            Email: client.email,
-            CPF: client.cpf,
-            Telefone: client.phone,
-            SERIAL: equipamento.serial,
-            PPPOE: equipamento.pppoe,
-            IP: equipamento.ip,
-            MODELO: equipamento.modelo,
-            SSID24G: equipamento.ssid24g,
-            SENHA24G: equipamento.senha24g,
-            SSID5G: equipamento.ssid5g,
-            SENHA5G: equipamento.senha5g,
-          }))
-        );
+        const adaptedData = clients.map(client => 
+          client.equipamentos.length > 0
+          ? client.equipamentos.map(equipamento => ({
+              Nome: client.name,
+              Email: client.email,
+              CPF: client.cpf,
+              Telefone: client.phone,
+              SERIAL: equipamento.serial,
+              PPPOE: equipamento.pppoe,
+              IP: equipamento.ip,
+              MODELO: equipamento.modelo,
+              SSID24G: equipamento.ssid24g,
+              SENHA24G: equipamento.senha24g,
+              SSID5G: equipamento.ssid5g,
+              SENHA5G: equipamento.senha5g,
+            }))
+          : [{
+              Nome: client.name,
+              Email: client.email,
+              CPF: client.cpf,
+              Telefone: client.phone,
+              SERIAL: '',
+              PPPOE: '',
+              IP: '',
+              MODELO: '',
+              SSID24G: '',
+              SENHA24G: '',
+              SSID5G: '',
+              SENHA5G: '',
+            }]
+        ).flat(); // Usa flat() para achatar a estrutura da matriz
 
         // Cria a planilha
         const ws = XLSX.utils.json_to_sheet(adaptedData);
