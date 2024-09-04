@@ -1,0 +1,53 @@
+.mainjanela {
+
+    flex-direction: column;
+    text-align: center;
+    height: 100vh; /* Altura da tela inteira */
+    padding: 10px; /* Espaçamento interno */
+    width: 100%;
+  }
+  
+  .mainjanelasub-components {
+    display: flex;
+
+    justify-content: space-between;
+    gap: 0px; /* Espaçamento entre os componentes */
+    overflow: auto; /* Adiciona barra de rolagem se necessário */
+  }
+  
+  .component-container {
+    flex: 1;
+    min-width: 0; /* Garante que os componentes se ajustem corretamente */
+    
+    box-sizing: border-box; /* Inclui o padding e border no tamanho total do componente */
+    max-width: 100%; /* Impede que os componentes excedam a largura disponível */
+  }
+  
+  /* Ajustes de responsividade */
+  @media (max-width: 1024px) {
+    .mainjanelasub-components {
+      gap: 15px; /* Espaçamento reduzido entre os componentes */
+    }
+  
+    .component-container {
+      padding: 8px; /* Reduz o padding interno */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .mainjanelasub-components {
+      flex-direction: row; /* Alinha os componentes em coluna */
+      gap: 10px; /* Espaçamento reduzido entre os componentes */
+    }
+  
+    .component-container {
+      padding: 6px; /* Reduz ainda mais o padding interno */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .component-container {
+      padding: 4px; /* Ajusta o padding interno para telas muito pequenas */
+    }
+  }
+  

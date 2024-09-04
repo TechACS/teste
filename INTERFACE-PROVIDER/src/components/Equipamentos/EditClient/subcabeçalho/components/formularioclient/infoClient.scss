@@ -1,0 +1,125 @@
+.cadastrar-client {
+    width: 100%;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  
+    .title {
+      font-size: 25px;
+      padding: 5px;
+      font-weight: bold;
+      color: #5c5b5b;
+      margin-bottom: 20px;
+    }
+  
+    .section {
+      margin-bottom: 20px;
+  
+      &-title {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 15px;
+        color: #666;
+      }
+    }
+  
+    .form-group {
+      margin-bottom: 20px;
+  
+      label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+  
+      input,
+      textarea {
+        width: 100%;
+        padding: 10px;
+        border: 2px solid #ddd; // Aumenta a espessura da borda
+        border-radius: 6px; // Bordas mais arredondadas
+        box-sizing: border-box;
+        transition: border-color 0.3s, box-shadow 0.3s; // Transições suaves
+  
+        &:focus {
+          border-color: #007bff; // Cor da borda ao focar
+          box-shadow: 0 0 8px rgba(38, 143, 255, 0.3); // Sombra ao focar
+          outline: none; // Remove o contorno padrão do navegador
+        }
+      }
+  
+      input::placeholder,
+      textarea::placeholder {
+        color: #aaa;
+      }
+    }
+  
+    .input-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+  
+      .input-group-item {
+        flex: 1;
+        width: 500px; // Mantém o tamanho original
+  
+        label {
+          margin-bottom: 5px;
+        }
+  
+        input {
+          width: 100%;
+          padding: 10px;
+          border: 2px solid #ddd; // Aumenta a espessura da borda
+          border-radius: 6px; // Bordas mais arredondadas
+          box-sizing: border-box;
+          transition: border-color 0.3s, box-shadow 0.3s; // Transições suaves
+  
+          &:focus {
+            border-color: #007bff; // Cor da borda ao focar
+            box-shadow: 0 0 8px rgba(38, 143, 255, 0.3); // Sombra ao focar
+            outline: none; // Remove o contorno padrão do navegador
+          }
+        }
+      }
+    }
+  
+    .form-actions {
+      display: flex;
+      justify-content: space-between;
+      gap: 30px; // Espaçamento entre os botões
+  
+      .btn {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 6px; // Bordas mais arredondadas
+        color: #fff;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s, transform 0.3s; // Transições suaves
+  
+        &.salvar {
+          background: #28a745;
+  
+          &:hover {
+            background: #218838; // Cor do botão ao passar o mouse
+            transform: scale(1.05); // Efeito de zoom suave
+          }
+        }
+  
+        &.sair {
+          background: #dc3545;
+  
+          &:hover {
+            background: #c82333; // Cor do botão ao passar o mouse
+            transform: scale(1.05); // Efeito de zoom suave
+          }
+        }
+      }
+    }
+  }
+  
+  .section-contatos {
+    margin-right: 100px; // Mantém o espaçamento original
+  }
+  

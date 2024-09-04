@@ -1,0 +1,193 @@
+.header-content {
+  display: flex;
+  justify-content: space-between; /* Ajusta o espaçamento entre os itens */
+  align-items: center; /* Alinha verticalmente os itens ao centro */
+  margin: 0.6% 5%; /* Espaçamento superior e lateral */
+  background: #ffffff; /* Fundo branco para o container */
+  border-radius: 8px; /* Bordas arredondadas */
+  padding: 0px; /* Padding geral para espaçamento interno */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave ao redor do container */
+}
+
+.header-item {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Alinha o conteúdo ao centro */
+  gap: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Leve sombra ao redor de cada item */
+  padding: 10px;
+  border-radius: 8px; /* Bordas arredondadas para os itens */
+  background: #ffffff; /* Fundo branco para cada item */
+  transition: box-shadow 0.3s, transform 0.3s; /* Transições suaves para efeitos de hover */
+}
+
+.header-item:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Aumenta a sombra no hover */
+  transform: translateY(-2px); /* Adiciona um efeito de levantamento */
+}
+
+.add-client-container,
+.export-container {
+  width: 150px; /* Largura específica */
+  height: 60px; /* Altura específica */
+  flex: 0 0 auto; /* Não se expande ou contrai */
+}
+
+.search-container {
+  flex: 1; /* Ocupa o espaço restante */
+  position: relative; /* Para posicionar a mensagem de carregamento/erro */
+}
+
+.search-input {
+  border: 1px solid #ccc; /* Borda leve */
+  border-radius: 8px;
+  padding: 8px; /* Padding ajustado */
+  width: 100%;
+  font-size: 14px; /* Tamanho da fonte ajustado */
+  outline: none; /* Remove o contorno padrão */
+  transition: border-color 0.3s, box-shadow 0.3s; /* Transições suaves */
+}
+
+.search-input:focus {
+  border-color: #007bff; /* Cor da borda ao focar no campo */
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Sombra suave ao redor do campo de busca */
+}
+
+.loading-text,
+.error-text {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  font-size: 14px;
+  color: #999; /* Cor padrão */
+}
+
+.error-text {
+  color: #dc3545; /* Cor do texto de erro */
+}
+
+.export-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.icon {
+  font-size: 20px; /* Ajusta o tamanho do ícone */
+  color: #007bff; /* Cor dos ícones */
+}
+
+.text {
+  font-size: 14px; /* Ajusta o tamanho do texto */
+  color: #333; /* Cor do texto */
+}
+
+.stats-container {
+  flex: 1; /* Ocupa o espaço restante se necessário */
+}
+
+/* Opcional: Adiciona espaçamento e formatação ao texto do total de clientes */
+.total-number {
+  font-size: 18px; /* Tamanho do texto ajustado para ser menor */
+  color: #007bff;
+  margin-top: 10px;
+}
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #f4f4f4;
+  border-bottom: 1px solid #ddd;
+}
+
+.header-item {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+  cursor: pointer;
+  
+  .icon {
+    margin-right: 8px;
+  }
+  
+  .text {
+    font-size: 16px;
+  }
+}
+
+.search-container {
+  flex: 1;
+  position: relative;
+  
+  .search-input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+
+  .loading-text {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    color: #007bff;
+    font-size: 14px;
+    margin-top: 4px;
+  }
+
+  .error-text {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    color: red;
+    font-size: 14px;
+    margin-top: 4px;
+  }
+}
+
+.client-list {
+  margin-top: 0px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  overflow: hidden;
+
+  .header {
+    display: flex;
+    background-color: #f4f4f4;
+    border-bottom: 1px solid #ddd;
+    font-weight: bold;
+
+    .header-item {
+      flex: 1;
+      padding: 10px;
+      text-align: center;
+      border-right: 1px solid #ddd;
+
+      &:last-child {
+        border-right: none;
+      }
+    }
+  }
+
+  .client-item {
+    display: flex;
+    border-bottom: 1px solid #ddd;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    .client-data {
+      flex: 1;
+      padding: 10px;
+      text-align: center;
+      border-right: 1px solid #ddd;
+
+      &:last-child {
+        border-right: none;
+      }
+    }
+  }
+}
