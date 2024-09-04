@@ -72,7 +72,7 @@ const ClienteComponetecabecalho = ({ newClient, botaoClicado }) => {
 }
 
 ClienteComponetecabecalho.propTypes = {
-  newClient: PropTypes.string.isRequired,
+  newClient: PropTypes.bool.isRequired,
   botaoClicado: PropTypes.func.isRequired,
 };
 

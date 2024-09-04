@@ -6,7 +6,7 @@ import { updateClient } from '../../../../../../services/EditClient'; // Importe
 
 const InfoClient = ({ cpf, onCancel }) => {
   const [formData, setFormData] = useState({
-    nome: '',
+    name: '',
     cpf: '',
     rg: '',
     cnpj: '',
@@ -23,12 +23,28 @@ const InfoClient = ({ cpf, onCancel }) => {
 
   useEffect(() => {
     const fetchClientData = async () => {
-      const result = await searchClientByCpf(cpf);
+      try {
+        const result = await searchClientByCpf(cpf);
 
-      if (result.success) {
-        setFormData(result.data);
-      } else {
-        setError(result.error);
+        if (result.success) {
+          setFormData({
+            name: result.data.name || '',
+            cpf: result.data.cpf || '',
+            rg: result.data.rg || '',
+            cnpj: result.data.cnpj || '',
+            dataNascimento: result.data.dataNascimento || '',
+            celular: result.data.celular || '',
+            email: result.data.email || '',
+            observacoes: result.data.observacoes || '',
+            residenciaNumero: result.data.residenciaNumero || '',
+            residenciaComplemento: result.data.residenciaComplemento || '',
+            residenciaObservacoes: result.data.residenciaObservacoes || '',
+          });
+        } else {
+          setError(result.error);
+        }
+      } catch (err) {
+        setError('Error fetching client data');
       }
     };
 
@@ -37,35 +53,38 @@ const InfoClient = ({ cpf, onCancel }) => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData({
-      ...formData,
+    setFormData(prevState => ({
+      ...prevState,
       [name]: value,
-    });
+    }));
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Atualizar cliente com base nos dados do formulário
-    const result = await updateClient(cpf, formData);
+    try {
+      const result = await updateClient(cpf, formData);
 
-    if (result.success) {
-      alert('Cliente atualizado com sucesso!');
-      setFormData({
-        name: '',
-        cpf: '',
-        rg: '',
-        cnpj: '',
-        dataNascimento: '',
-        celular: '',
-        email: '',
-        observacoes: '',
-        residenciaNumero: '',
-        residenciaComplemento: '',
-        residenciaObservacoes: '',
-      });
-    } else {
-      alert(`Erro ao atualizar cliente: ${result.error}`);
+      if (result.success) {
+        alert('Cliente atualizado com sucesso!');
+        setFormData({
+          name: '',
+          cpf: '',
+          rg: '',
+          cnpj: '',
+          dataNascimento: '',
+          celular: '',
+          email: '',
+          observacoes: '',
+          residenciaNumero: '',
+          residenciaComplemento: '',
+          residenciaObservacoes: '',
+        });
+      } else {
+        alert(`Erro ao atualizar cliente: ${result.error}`);
+      }
+    } catch (err) {
+      alert('Erro ao atualizar cliente');
     }
   };
 
@@ -75,16 +94,15 @@ const InfoClient = ({ cpf, onCancel }) => {
 
   return (
     <div className="cadastrar-client">
-      
       <form onSubmit={handleSubmit}>
         <div className="section geral">
           <h2 className="section-title">Informações</h2>
           <div className="form-group">
-            <label htmlFor="nome">Nome</label>
+            <label htmlFor="name">Nome</label>
             <input
               type="text"
-              id="nome"
-              name="nome"
+              id="name"
+              name="name"
               value={formData.name}
               onChange={handleChange}
               placeholder="Nome completo"
@@ -142,12 +160,12 @@ const InfoClient = ({ cpf, onCancel }) => {
           <h2 className="section-title">CONTATOS</h2>
           <div className="form-group input-group">
             <div className="input-group-item">
-              <label htmlFor="phone">Celular</label>
+              <label htmlFor="celular">Celular</label>
               <input
                 type="tel"
-                id="phone"
-                name="phone"
-                value={formData.phone}
+                id="celular"
+                name="celular"
+                value={formData.celular}
                 onChange={handleChange}
                 placeholder="(00) 00000-0000"
               />
@@ -213,7 +231,7 @@ const InfoClient = ({ cpf, onCancel }) => {
         </div>
 
         <div className="form-actions">
-        <FormButtons2 onCancel={onCancel} />
+          <FormButtons2 onCancel={onCancel} />
         </div>
       </form>
     </div>
