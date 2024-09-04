@@ -4,7 +4,6 @@ import * as XLSX from 'xlsx';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFileExcel } from '@fortawesome/free-solid-svg-icons';
 import { fetchClients } from '../../../services/authService';
-import { fetchEquipamentos } from '../../../services/ListarEquipamentos';
 
 const ExportToExcelButton = () => {
   const [loading, setLoading] = useState(false);
@@ -17,32 +16,33 @@ const ExportToExcelButton = () => {
     try {
       const result = await fetchClients();
       if (result.success) {
-        const data = result.data;
+        const clients = result.data;
 
-        // Adapte os dados conforme necessário
-        const adaptedData = data.map(client => ({
-          Nome: client.name,
-          Email: client.email,
-          CPF: client.cpf,
-          Telefone: client.phone,
-          SERIAL:   Equipamentos.serial,
-          PPPOE:   Equipamentos.pppoe,
-          IP:   Equipamentos.ip,
-          MODELO:   Equipamentos.modelo,
-          ssid24g:   Equipamentos.ssid24g,
-          senha24g:   Equipamentos.senha24g,
-          ssid5g:   Equipamentos.ssid5g,
-          senha5g:   Equipamentos.senha5g,
+        // Adapta os dados conforme necessário para exportação
+        const adaptedData = clients.flatMap(client => 
+          client.equipamentos.map(equipamento => ({
+            Nome: client.name,
+            Email: client.email,
+            CPF: client.cpf,
+            Telefone: client.phone,
+            SERIAL: equipamento.serial,
+            PPPOE: equipamento.pppoe,
+            IP: equipamento.ip,
+            MODELO: equipamento.modelo,
+            SSID24G: equipamento.ssid24g,
+            SENHA24G: equipamento.senha24g,
+            SSID5G: equipamento.ssid5g,
+            SENHA5G: equipamento.senha5g,
+          }))
+        );
 
-        }));
-
-        
+        // Cria a planilha
         const ws = XLSX.utils.json_to_sheet(adaptedData);
         const wb = XLSX.utils.book_new();
-        XLSX.utils.book_append_sheet(wb, ws, 'Clientes');
+        XLSX.utils.book_append_sheet(wb, ws, 'Clientes e Equipamentos');
         const wbout = XLSX.write(wb, { bookType: 'xlsx', type: 'array' });
         const blob = new Blob([wbout], { type: 'application/octet-stream' });
-        saveAs(blob, 'clientes.xlsx');
+        saveAs(blob, 'clientes_e_equipamentos.xlsx');
       } else {
         throw new Error(result.error || 'Erro ao buscar dados dos clientes');
       }
