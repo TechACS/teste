@@ -2,11 +2,11 @@ import React from 'react';
 import './EquipamentoList.scss';
 import { Link } from 'react-router-dom';
 
-const ClientList = ({ clients, currentPage, itemsPerPage }) => {
+const EquipamentoList = ({ Equipamentos, currentPage, itemsPerPage }) => {
   // Calcular a página atual dos clientes
-  const indexOfLastClient = currentPage * itemsPerPage;
-  const indexOfFirstClient = indexOfLastClient - itemsPerPage;
-  const currentClients = clients.slice(indexOfFirstClient, indexOfLastClient);
+  const indexOfLastEquipamentos = currentPage * itemsPerPage;
+  const indexOfFirstEquipamentos = indexOfLastEquipamentos - itemsPerPage;
+  const currentEquipamentos = Equipamentos.slice(indexOfFirstEquipamentos, indexOfLastEquipamentos);
 
   return (
     <div className="client-list">
@@ -17,17 +17,17 @@ const ClientList = ({ clients, currentPage, itemsPerPage }) => {
         <div className="header-item">Modelo</div>
       </div>
       
-      {currentClients.map(client => (
+      {currentEquipamentos.map(Equipamentos => (
         <Link 
-          key={client._id} 
-          to={`/EditClient/${client.cpf}`} 
+          key={Equipamentos._id} 
+          to={`/EditEquipamentos/${Equipamentos.serial}`} 
           className="client-item-link"
         >
           <div className="client-item">
-            <div className="client-data">{client.name}</div>
-            <div className="client-data">{client.email}</div>
-            <div className="client-data">{client.cpf}</div>
-            <div className="client-data">{client.phone}</div>
+            <div className="client-data">{Equipamentos.serial}</div>
+            <div className="client-data">{Equipamentos.pppoe}</div>
+            <div className="client-data">{Equipamentos.ip}</div>
+            <div className="client-data">{Equipamentos.modelo}</div>
           </div>
         </Link>
       ))}
@@ -35,4 +35,4 @@ const ClientList = ({ clients, currentPage, itemsPerPage }) => {
   );
 };
 
-export default ClientList;
+export default EquipamentoList;

@@ -5,35 +5,35 @@ import EquipamentoList from '../EquipamentoList/EquipamentoList';
 import CadastrarEquipamento from '../CadastrarEquipamento/CadastrarEquipamento';
 import EquipamentoComponentecabecalho from '../Cabeçalho/EquipamentoComponetCabeçalho';
 import Pagination from '../EquipamentoList/Pagination/Pagination';
-import { fetchClients } from '../../../services/authService'; // Ajuste o caminho conforme necessário
+import { fetchEquipamentos } from '../../../services/ListarEquipamentos'; // Ajuste o caminho conforme necessário
 
 const EquipamentoComponetSubCabeçalho = () => {
   const [view, setView] = useState("list");
-  const [clients, setClients] = useState([]);
+  const [Equipamentos, setEquipamentos] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 10;
 
   useEffect(() => {
-    const loadClients = async () => {
-      const result = await fetchClients();
+    const loadEquipamentos = async () => {
+      const result = await fetchEquipamentos();
       if (result.success) {
-        setClients(result.data);
+        setEquipamentos(result.data);
       } else {
         setError(result.error || 'Erro ao buscar Equipamentos');
       }
       setLoading(false);
     };
 
-    loadClients();
+    loadEquipamentos();
   }, []);
 
   const handleCancel = () => {
     setView("list");
   };
 
-  const handleAddClient = () => {
+  const handleAddEquipamento = () => {
     setView("form");
   };
 
@@ -42,19 +42,19 @@ const EquipamentoComponetSubCabeçalho = () => {
 
   return (
     <div>
-      <EquipamentoComponentecabecalho newClient={view === "form"} botaoClicado={handleAddClient} />
+      <EquipamentoComponentecabecalho newEquipamento={view === "form"} botaoClicado={handleAddEquipamento} />
       <BackgroundComponenteSubcabeçalho>
         {view === "form" ? 
           <CadastrarEquipamento onCancel={handleCancel} /> 
           : <>
               <EquipamentoList 
-                clients={clients} 
+                Equipamentos={Equipamentos} 
                 currentPage={currentPage} 
                 itemsPerPage={itemsPerPage} 
               />
               <Pagination 
                 currentPage={currentPage} 
-                totalItems={clients.length} 
+                totalItems={Equipamentos.length} 
                 itemsPerPage={itemsPerPage} 
                 onPageChange={setCurrentPage} 
               />
