@@ -1,3 +1,6 @@
+*{
+  text-decoration: none;
+}
 .client-list {
   width: 100%;
   padding: 10px;
@@ -6,6 +9,7 @@
   border-radius: 10px;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Sombra mais pronunciada */
   height: 80%;
+ 
 }
 
 
@@ -53,6 +57,7 @@
   text-align: center; /* Centraliza o texto */
   font-size: 15px;
   color: #333;
+  
 }
 
 .loading {

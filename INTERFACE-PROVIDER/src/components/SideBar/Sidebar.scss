@@ -13,7 +13,7 @@
   flex-direction: column;
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Sombra leve */
   z-index: 1000; /* Fica acima de outros elementos */
-
+text-decoration: none;
   &.collapsed {
     width: 25px; /* Largura reduzida quando colapsada */
     .content {
@@ -53,6 +53,7 @@
       text-decoration: none;
       width: 100%;
       margin-bottom: 15px;
+      text-decoration: none;
     }
 
     .card {
@@ -73,7 +74,9 @@
         margin: 0;
         font-size: 16px;
         text-align: center;
-        border-radius: 4px; /* Bordas arredondadas */
+        border-radius: 4px;
+        text-decoration: none;
+         /* Bordas arredondadas */
       }
     }
   }
