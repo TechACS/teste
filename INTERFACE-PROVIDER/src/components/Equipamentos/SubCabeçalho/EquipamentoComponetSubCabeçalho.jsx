@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import './ClienteComponetSubCabeçalho.scss';
+import './EquipamentoComponetSubCabeçalho.scss';
 import BackgroundComponenteSubcabeçalho from '../../Background/SubCabeçalho/BackgroundComponenteSubcabeçalho';
-import ClientList from '../ClienteList/ClientList';
-import CadastrarClient from '../CadastrarClient/CadastrarClient';
-import ClienteComponentecabecalho from '../Cabeçalho/ClienteComponetCabeçalho';
+import EquipamentoList from '../ClienteList/EquipamentoList';
+import CadastrarEquipamento from '../CadastrarClient/CadastrarClient/';
+import EquipamentoComponentecabecalho from '../Cabeçalho/EquipamentoComponetCabeçalho';
 import Pagination from '../ClienteList/Pagination/Pagination';
 import { fetchClients } from '../../../services/authService'; // Ajuste o caminho conforme necessário
 
-const ClienteComponet = () => {
+const EquipamentoComponetSubCabeçalho = () => {
   const [view, setView] = useState("list");
   const [clients, setClients] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -21,7 +21,7 @@ const ClienteComponet = () => {
       if (result.success) {
         setClients(result.data);
       } else {
-        setError(result.error || 'Erro ao buscar clientes');
+        setError(result.error || 'Erro ao buscar Equipamentos');
       }
       setLoading(false);
     };
@@ -42,12 +42,12 @@ const ClienteComponet = () => {
 
   return (
     <div>
-      <ClienteComponentecabecalho newClient={view === "form"} botaoClicado={handleAddClient} />
+      <EquipamentoComponentecabecalho newClient={view === "form"} botaoClicado={handleAddClient} />
       <BackgroundComponenteSubcabeçalho>
         {view === "form" ? 
-          <CadastrarClient onCancel={handleCancel} /> 
+          <CadastrarEquipamento onCancel={handleCancel} /> 
           : <>
-              <ClientList 
+              <EquipamentoList 
                 clients={clients} 
                 currentPage={currentPage} 
                 itemsPerPage={itemsPerPage} 
@@ -65,4 +65,4 @@ const ClienteComponet = () => {
   );
 }
 
-export default ClienteComponet;
+export default EquipamentoComponetSubCabeçalho;

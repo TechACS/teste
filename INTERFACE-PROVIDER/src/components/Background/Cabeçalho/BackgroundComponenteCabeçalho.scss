@@ -17,13 +17,15 @@ html, body {
     height: 110px;
     overflow: hidden;
   
- /* Altere para relative para se ajustar ao fluxo do documento */
-  
+
+   
+
+
   
     
    
   }
-  
+
   .subcabecalho {
     background-color: #fff; 
     box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
@@ -38,6 +40,7 @@ html, body {
     display: flex;
     justify-content: center;
     flex-wrap: wrap; 
+    
   }
 
   @media (max-width: 750px) {
