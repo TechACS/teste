@@ -13,7 +13,7 @@ import Cliente from './routes/Client/Cliente';
 import EditClient from './components/client/EditClient/EditClient';
 
 import Equipamentos from './routes/Equipamentos/Equipamentos';
-
+import EditEquipamentos from './components/Equipamentos/SegundaTela/EditEquipamento/EditEquipamento';
 const router = createBrowserRouter([
   {
     path: '/login',
@@ -44,7 +44,7 @@ const router = createBrowserRouter([
       },
       {
         path: 'EditEquipamentos/:serial',
-        element: <ProtectedRoute element={<EditClient />} />,
+        element: <ProtectedRoute element={<EditEquipamentos />} />,
       },
       // Adicione outras rotas protegidas aqui
     ],

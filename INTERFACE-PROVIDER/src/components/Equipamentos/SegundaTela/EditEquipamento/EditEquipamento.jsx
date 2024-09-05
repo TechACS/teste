@@ -1,13 +1,13 @@
 import React from 'react'
 import './EditEquipamento.scss';
 
-import EditEquipamentoComponetCabeçalho from './Cabeçalho/ComponentCabeçalho';
+import EditEquipamentoComponetCabeçalho from './Cabeçalho/EquipamentoCabeçalho';
 import EditEquipamentoSubcabeçalho from './subcabeçalho/EditEquipamentoSubcabeçalho';
 
 function EditEquipamento({childrem}) {
   return (
     <div className='teste'>
-    <EditEquipamentoComponetCabeçalho>{childrem}</EditEquipamentoComponetCabeçalho>
+    <EditEquipamentoComponetCabeçalho></EditEquipamentoComponetCabeçalho>
     <EditEquipamentoSubcabeçalho></EditEquipamentoSubcabeçalho>
       
     </div>

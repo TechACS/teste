@@ -1,5 +1,5 @@
 import React from 'react'
-import BackgroundComponente from '../../../Background/Cabeçalho/BackgroundComponenteCabeçalho'
+import BackgroundComponente from '../../../../Background/Cabeçalho/BackgroundComponenteCabeçalho'
 import ComponentCabeçalho from './ComponentCabeçalho';
 function editclientCabeçalho() {
   return (
