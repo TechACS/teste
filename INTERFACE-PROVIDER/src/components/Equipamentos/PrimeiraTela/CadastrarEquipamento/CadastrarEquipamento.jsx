@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './CadastrarEquipamento.scss';
-import FormButtons2 from '../../BUTTONS/FormButton'; // Certifique-se de que o caminho está correto
-import { cadastrarClient } from '../../../services/cadastrarClient';
+import FormButtons2 from '../../../BUTTONS/FormButton'; // Certifique-se de que o caminho está correto
+import { cadastrarClient } from '../../../../services/cadastrarClient';
 
 const CadastrarClient = ({ onCancel }) => {
   const [formData, setFormData] = useState({

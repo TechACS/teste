@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './FormDispositivos.scss';
-import FormButtons5 from '../../../../../BUTTONS/FormButton';
+import FormButtons5 from '../../../../../../BUTTONS/FormButton';
 
 const FormDispositivos = ({ onCancel }) => {
   const [formData, setFormData] = useState({

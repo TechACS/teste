@@ -13,7 +13,7 @@ import Cliente from './routes/Client/Cliente';
 import EditClient from './components/client/EditClient/EditClient';
 
 import Equipamentos from './routes/Equipamentos/Equipamentos';
-import EditEquipamento from './components/Equipamentos/EditEquipamento/EditEquipamento';
+
 const router = createBrowserRouter([
   {
     path: '/login',

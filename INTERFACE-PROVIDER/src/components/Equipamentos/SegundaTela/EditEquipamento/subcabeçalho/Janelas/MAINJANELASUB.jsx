@@ -4,7 +4,7 @@ import GeralComponent from './GERAL/GeralComponent';
 import ObservaçõesComponent from './OBSERVAÇÃO/ObservaçõesComponents';
 import DispositivosComponent from './DISPOSITIVOS/DispositivosComponets';
 import ButtonJanelaComponent from '../components/janelasButton/ButtonJanelaComponent';
-
+import Gerenciamento from './Gerenciamento/Gerenciamento'
 function MAINJANELA() {
   // Estado para o componente ativo
   const [activeComponent, setActiveComponent] = useState(<GeralComponent />);
@@ -16,6 +16,11 @@ function MAINJANELA() {
     setActiveComponent(<GeralComponent />);
     setActiveButton('Geral');
   };
+  const showGerenciamento = () => {
+    setActiveComponent(<Gerenciamento />);
+    setActiveButton('Gerenciamento');
+  };
+  
   
   const showObservações = () => {
     setActiveComponent(<ObservaçõesComponent />);
@@ -34,6 +39,11 @@ function MAINJANELA() {
           descrição='Geral'
           botaoClicado={showGeral}
           isActive={activeButton === 'Geral'}
+        />
+         <ButtonJanelaComponent
+          descrição='Gerenciamento'
+          botaoClicado={showGerenciamento}
+          isActive={activeButton === 'Gerenciamento'}
         />
         <ButtonJanelaComponent
           descrição='Observações'

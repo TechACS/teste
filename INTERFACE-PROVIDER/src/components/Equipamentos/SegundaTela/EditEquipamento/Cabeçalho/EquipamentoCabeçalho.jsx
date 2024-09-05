@@ -5,7 +5,9 @@ function editclientCabeçalho() {
   return (
     <div>
             <BackgroundComponente>
-            <ComponentCabeçalho></ComponentCabeçalho>
+            <ComponentCabeçalho>
+              <h1>sdcsdcdscd</h1>
+              </ComponentCabeçalho>
                 
             </BackgroundComponente>
           

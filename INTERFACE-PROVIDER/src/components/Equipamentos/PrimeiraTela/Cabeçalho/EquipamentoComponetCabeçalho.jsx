@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import './EquipamentoComponetCabeçalho.scss';
-import BackgroundComponente from '../../Background/Cabeçalho/BackgroundComponenteCabeçalho';
+import BackgroundComponente from '../../../Background/Cabeçalho/BackgroundComponenteCabeçalho';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus, faFileExcel } from '@fortawesome/free-solid-svg-icons';
 import PropTypes from 'prop-types'; // Não se esqueça de importar PropTypes
-import { searchClients } from '../../../services/authService'; // Importe a função de API
-import ExportToExcelButton from '../../ExportToExcelButton/ExportToExcelButton';
+import { searchClients } from '../../../../services/authService'; // Importe a função de API
+import ExportToExcelButton from '../../../ExportToExcelButton/ExportToExcelButton';
 const ClienteComponetecabecalho = ({ newClient, botaoClicado }) => {
   const [searchTerm, setSearchTerm] = useState('');
   const [clients, setClients] = useState([]);

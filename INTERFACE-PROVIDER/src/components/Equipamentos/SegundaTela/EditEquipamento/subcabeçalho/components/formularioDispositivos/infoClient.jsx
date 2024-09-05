@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import './infoClient.scss'; // Certifique-se de que o caminho está correto
-import FormButtons2 from '../../../../../BUTTONS/FormButton'; // Ajuste o caminho se necessário
-import { searchClientByCpf } from '../../../../../../services/ListarClient';
-import { updateClient } from '../../../../../../services/EditClient'; // Importe a função de atualização
+import FormButtons2 from '../../../../../../BUTTONS/FormButton'; // Ajuste o caminho se necessário
+//import { searchClientByCpf } from '../../../../../../../services/EditClient';
+//import { updateClient } from '../../../../../../services/EditClient'; // Importe a função de atualização
 
 const InfoClient = ({ cpf, onCancel }) => {
   const [formData, setFormData] = useState({

@@ -3,7 +3,7 @@ import { saveAs } from 'file-saver';
 import * as XLSX from 'xlsx';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFileExcel } from '@fortawesome/free-solid-svg-icons';
-import { fetchClients } from '../../../services/authService';
+import { fetchClients } from '../../../../services/authService';
 
 const ExportToExcelButton = () => {
   const [loading, setLoading] = useState(false);

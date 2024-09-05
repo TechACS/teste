@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import './FormObservações.scss';
 //import NewUpload from '../NewUpload/NewUpload'; // Verifique o caminho correto
-import FormButtons2 from '../../../../../BUTTONS/FormButton';
+import FormButtons2 from '../../../../../../BUTTONS/FormButton';
 const FormObservações = ({ onCancel }) => {
   const [formData, setFormData] = useState({
     observacao: '',

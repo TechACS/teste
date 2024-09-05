@@ -1,5 +1,5 @@
 import React from 'react'
-import BackgroundComponenteSubcabeçalho from '../../../Background/SubCabeçalho/BackgroundComponenteSubcabeçalho'
+import BackgroundComponenteSubcabeçalho from '../../../../Background/SubCabeçalho/BackgroundComponenteSubcabeçalho'
 import MAINJANELA from './Janelas/MAINJANELASUB'
 
 function editclientSubcabeçalho() {

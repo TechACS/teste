@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import './EquipamentoComponetSubCabeçalho.scss';
-import BackgroundComponenteSubcabeçalho from '../../Background/SubCabeçalho/BackgroundComponenteSubcabeçalho';
-import EquipamentoList from '../EquipamentoList/EquipamentoList';
-import CadastrarEquipamento from '../CadastrarEquipamento/CadastrarEquipamento';
+import BackgroundComponenteSubcabeçalho from '../../../Background/SubCabeçalho/BackgroundComponenteSubcabeçalho';
+import EquipamentoList from '../../PrimeiraTela/EquipamentoList/EquipamentoList';
+import CadastrarEquipamento from '../../PrimeiraTela/CadastrarEquipamento/CadastrarEquipamento';
 import EquipamentoComponentecabecalho from '../Cabeçalho/EquipamentoComponetCabeçalho';
-import Pagination from '../EquipamentoList/Pagination/Pagination';
-import { fetchEquipamentos } from '../../../services/ListarEquipamentos'; // Ajuste o caminho conforme necessário
+import Pagination from '../../PrimeiraTela/EquipamentoList/Pagination/Pagination';
+import { fetchEquipamentos } from '../../../../services/ListarEquipamentos'; // Ajuste o caminho conforme necessário
 
 const EquipamentoComponetSubCabeçalho = () => {
   const [view, setView] = useState("list");
