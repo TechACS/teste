@@ -4,7 +4,7 @@ import GeralComponent from './GERAL/GeralComponent';
 import ObservaçõesComponent from './OBSERVAÇÃO/ObservaçõesComponents';
 import DispositivosComponent from './DISPOSITIVOS/DispositivosComponets';
 import ButtonJanelaComponent from '../components/janelasButton/ButtonJanelaComponent';
-import Gerenciamento from './Gerenciamento/Gerenciamento'
+import Gerenciamento from './Gerenciamento/GerenciamentoComponent'
 function MAINJANELA() {
   // Estado para o componente ativo
   const [activeComponent, setActiveComponent] = useState(<GeralComponent />);
