@@ -1,8 +1,10 @@
 import React from 'react'
-
+import './InformaçõesGerais.scss';
 function InformaçõesGerais() {
   return (
-    <div>InformaçõesGerais</div>
+    <div className='InformaçõesGerais'>
+        InformaçõesGerais
+        </div>
   )
 }
 

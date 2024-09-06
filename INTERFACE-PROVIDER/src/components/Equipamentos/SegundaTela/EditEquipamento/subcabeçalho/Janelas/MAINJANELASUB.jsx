@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './MAIN.scss';
 import GeralComponent from './GERAL/GeralComponent';
-import ObservaçõesComponent from './OBSERVAÇÃO/ObservaçõesComponents';
+import ObservaçõesComponent from './DIAGNOSTICO/ObservaçõesComponents';
 import DispositivosComponent from './DISPOSITIVOS/DispositivosComponets';
 import ButtonJanelaComponent from '../components/janelasButton/ButtonJanelaComponent';
 import Gerenciamento from './Gerenciamento/GerenciamentoComponent'
@@ -33,7 +33,7 @@ function MAINJANELA() {
   };
 
   return (
-    <div className='mainjanela'>
+    <div className='mainjanela-dispositivo'>
       <div className='mainjanelasub-components'>
         <ButtonJanelaComponent
           descrição='Geral'

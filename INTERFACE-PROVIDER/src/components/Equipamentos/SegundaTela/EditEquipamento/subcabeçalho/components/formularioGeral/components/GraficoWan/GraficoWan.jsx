@@ -1,8 +1,10 @@
-import React from 'react'
-
+import React from 'react';
+import './GraficoWan.scss';
 function GraficoWan() {
   return (
-    <div>GraficoWan</div>
+    <div className='GraficoWan'>
+        GraficoWan
+        </div>
   )
 }
 

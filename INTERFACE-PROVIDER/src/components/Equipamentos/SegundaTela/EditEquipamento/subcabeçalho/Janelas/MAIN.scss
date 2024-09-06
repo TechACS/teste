@@ -1,7 +1,7 @@
-.mainjanela {
+.mainjanela-dispositivo {
 
-    flex-direction: column;
-    text-align: center;
+  
+    
     height: 100vh; /* Altura da tela inteira */
     padding: 10px; /* Espaçamento interno */
     width: 100%;
@@ -10,9 +10,9 @@
   .mainjanelasub-components {
     display: flex;
 
-    justify-content: space-between;
+   
     gap: 0px; /* Espaçamento entre os componentes */
-    overflow: auto; /* Adiciona barra de rolagem se necessário */
+  /* Adiciona barra de rolagem se necessário */
   }
   
   .component-container {

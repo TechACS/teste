@@ -1,8 +1,10 @@
 import React from 'react'
-
+import './Sinal.scss';
 function Sinal() {
   return (
-    <div>Sinal</div>
+    <div className='Sinal'>
+        Sinal
+        </div>
   )
 }
 
