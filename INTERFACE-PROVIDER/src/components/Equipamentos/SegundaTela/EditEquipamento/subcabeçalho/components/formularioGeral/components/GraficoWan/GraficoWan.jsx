@@ -3,7 +3,10 @@ import './GraficoWan.scss';
 function GraficoWan() {
   return (
     <div className='GraficoWan'>
-        GraficoWan
+        
+
+        <h1>GraficoWan</h1>
+        
         </div>
   )
 }
