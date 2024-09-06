@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import JanelasBackground from '../../components/janelasBackground/janelasBackground'
 
 
-import FormObservações from '../../components/FormObservações/FormObservações';
+import FormObservações from '../../components/FormDiagnosticos/FormObservações';
 function ObservaçõesComponents() {
 
   const { cpf } = useParams();

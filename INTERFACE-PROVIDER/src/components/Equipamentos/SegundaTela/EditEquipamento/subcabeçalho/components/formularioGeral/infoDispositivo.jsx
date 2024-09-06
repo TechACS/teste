@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import './infoClient.scss'; // Certifique-se de que o caminho está correto
+import './infoDispositivo.scss'; // Certifique-se de que o caminho está correto
 import FormButtons2 from '../../../../../../BUTTONS/FormButton'; // Ajuste o caminho se necessário
 //import { searchClientByCpf } from '../../../../../../../services/EditClient';
 //import { updateClient } from '../../../../../../services/EditClient'; // Importe a função de atualização
 
-const InfoClient = ({ cpf, onCancel }) => {
+const infoDispositivo = ({ cpf, onCancel }) => {
   const [formData, setFormData] = useState({
     name: '',
     cpf: '',
@@ -44,7 +44,7 @@ const InfoClient = ({ cpf, onCancel }) => {
           setError(result.error);
         }
       } catch (err) {
-        setError('Error fetching client data');
+        setError('Error fetching c5453lient data');
       }
     };
 
@@ -238,4 +238,4 @@ const InfoClient = ({ cpf, onCancel }) => {
   );
 };
 
-export default InfoClient;
+export default infoDispositivo;
