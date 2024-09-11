@@ -8,11 +8,23 @@
  
 }
 .container-infoDispositivo-1{
-  display: flex;
-  flex: auto;
-  flex-direction: row;
-  #porta{
+  display: block;
+ flex: 1;
+
+
+  #sinal{
     display: flex;
-    flex-direction: row;
+    gap: 5px;
   }
+}
+
+.Grafico{
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+  margin-top: 5px;
+}
+.porta{
+  margin-top: 5px;
+  
 }
