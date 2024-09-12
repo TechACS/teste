@@ -4,7 +4,7 @@ function GraficoWan() {
   return (
     <div className='GraficoWan'>
         
-
+        
         <h1>GraficoWan</h1>
         
         </div>

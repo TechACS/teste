@@ -13,29 +13,29 @@ const infoDispositivo = () => {
   return (
         <div className="infoDispositivo">
           
-          <div className='container-infoDispositivo'>
-          <InformaçõesGerais></InformaçõesGerais>
+          <div className='container-device' id='container-infoDispositivo'>
+                <InformaçõesGerais></InformaçõesGerais>
 
-          <div className='container-infoDispositivo-1'>
-              <div id='sinal'>
-              <Sinal />
-              <Sinal />
-              </div>
-          
+                      <div id='container-infoDispositivo-1'>
 
-            <div className='porta'>
+                              <div className='container-device' id='sinal'>
+                                  <Sinal />
+                                  <Sinal />
+                              </div>
+                          
 
-            <Porta></Porta>
-
-            </div>
-          
-            </div>
+                            <div className='container-device' id='porta'>
+                                  <Porta></Porta>
+                            </div>
+                      
+                      </div>
+                  
+                
+                  <Dispositivos></Dispositivos>
             
-            <Dispositivos></Dispositivos>
+          </div>
 
-            </div>
-
-          <div className='Grafico'>
+          <div className='container-device' id='Grafico'>
 
           <GraficoWan></GraficoWan>
           <Graficoevices></Graficoevices>
