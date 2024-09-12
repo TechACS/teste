@@ -3,7 +3,7 @@ import './Descrição.scss';
 
 function Descrição() {
   return (
-    <div className='gerenciamento-Descrição'>
+    <div className='Diagnosticos-Descrição'>
         Descrição
 
     </div>

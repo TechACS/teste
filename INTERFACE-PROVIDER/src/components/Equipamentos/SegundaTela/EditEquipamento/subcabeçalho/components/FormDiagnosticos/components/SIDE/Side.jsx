@@ -4,7 +4,7 @@ import './Side.scss';
 import Opcoes from './option/Opcoes';
 function Side() {
   return (
-    <div className='Gerenciamento-Side'>
+    <div className='Diagnosticos-Side'>
 
         <Opcoes></Opcoes>
         <Opcoes></Opcoes>

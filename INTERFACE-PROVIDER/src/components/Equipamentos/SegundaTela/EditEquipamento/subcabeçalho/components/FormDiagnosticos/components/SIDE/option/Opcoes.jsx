@@ -2,7 +2,7 @@ import React from 'react'
 import './Opcoes.scss';
 function Opcoes() {
   return (
-    <div className='Gerenciamento-opcoes'
+    <div className='Diagnosticos-opcoes'
     >
 
         
