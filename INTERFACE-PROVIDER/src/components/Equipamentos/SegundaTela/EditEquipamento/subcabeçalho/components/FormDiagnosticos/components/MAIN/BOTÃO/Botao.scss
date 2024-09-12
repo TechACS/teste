@@ -1,18 +1,91 @@
-.Diagnosticos-Button{
-
-    gap: 5px;
-    
-    flex: 1;
+.Diagnosticos-Ping {
     display: flex;
-    button{
-
-        border: none;
-    background-color: aqua;
-    padding: 15px;
-    margin-bottom: 10px;
-    flex: 1;
-    
-    
+    flex-direction: row;
+    gap: 15px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+    margin: 0 auto;
+    box-sizing: border-box;
+    flex-wrap: wrap; // Permite que os itens se movam para a linha seguinte se necessário
+  }
+  
+  .Diagnosticos-Ping-1 {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    flex: 1; // Permite que esta seção expanda para preencher o espaço disponível
+  }
+  
+  .Diagnosticos-Ping-2 {
+    display: flex;
+    gap: 15px;
+    flex: 1; // Permite que esta seção expanda para preencher o espaço disponível
+    flex-wrap: wrap; // Permite que os itens se movam para a linha seguinte se necessário
+  }
+  
+  .Diagnosticos-Ping-2 > div {
+    flex: 1; // Faz com que os divs dentro de Diagnosticos-Ping-2 preencham o espaço disponível igualmente
+    min-width: 200px; // Define uma largura mínima para evitar que fiquem muito pequenos
+  }
+  
+  input[type="number"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    box-sizing: border-box;
+    outline: none;
+    transition: border-color 0.3s;
+    width: 100%; // Garante que o input use toda a largura disponível
+  }
+  
+  input[type="number"]:focus {
+    border-color: #007bff;
+  }
+  
+  button {
+    border: none;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    flex: 1; // Permite que o botão ocupe o espaço disponível na linha
+    min-width: 100px; // Define uma largura mínima para o botão
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  button:active {
+    transform: scale(0.98);
+  }
+  
+  @media (max-width: 600px) {
+    .Diagnosticos-Ping {
+      flex-direction: column;
+      align-items: stretch; // Garante que os itens ocupem toda a largura disponível
     }
-    
-}
+  
+    .Diagnosticos-Ping-2 {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .Diagnosticos-Ping-2 > div {
+      min-width: auto; // Remove a largura mínima em telas menores
+    }
+  
+    button {
+      width: 100%;
+      padding: 15px;
+      font-size: 18px;
+      min-width: auto; // Remove a largura mínima em telas menores
+    }
+  }
+  
