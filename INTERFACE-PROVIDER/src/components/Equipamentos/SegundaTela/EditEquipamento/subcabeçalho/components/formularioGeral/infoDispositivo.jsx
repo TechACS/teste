@@ -8,7 +8,8 @@ import Porta from './components/PORTA/Porta';
 import GraficoWan from './components/GraficoWan/GraficoWan';
 import Graficoevices from './components/Graficodevices/Graficodevices.jsx';
 
-const infoDispositivo = () => {
+import FormButtons from '../../../../../../BUTTONS/FormButton.jsx';
+const infoDispositivo = ( {onCancel} ) => {
  
   return (
         <div className="infoDispositivo">
@@ -42,6 +43,10 @@ const infoDispositivo = () => {
 
           </div>
           
+
+          <div>
+          <FormButtons onCancel={onCancel} />
+        </div>
 
         </div>
   );

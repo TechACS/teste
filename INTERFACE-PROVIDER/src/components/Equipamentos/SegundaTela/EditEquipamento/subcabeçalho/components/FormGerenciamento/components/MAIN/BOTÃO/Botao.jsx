@@ -1,8 +1,13 @@
 import React from 'react'
-
+import './Botao.scss';
 function Botao() {
   return (
-    <div>Botao</div>
+    <div className='Gerenciamento-Button'>
+
+        <button>butao 1{}</button>
+        <button>butao 2{}</button>
+        
+    </div>
   )
 }
 
