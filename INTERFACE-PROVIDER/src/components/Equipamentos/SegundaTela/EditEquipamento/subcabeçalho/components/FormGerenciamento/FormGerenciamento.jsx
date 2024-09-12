@@ -11,9 +11,9 @@ function FormGerenciamento({ onCancel }) {
        <div  className='Gerenciamento-form'>
         <Side></Side>
 
-          <div >
+          
           <Main></Main>
-          </div>
+          
          
 
        </div>

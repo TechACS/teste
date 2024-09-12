@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './MAIN.scss';
 import GeralComponent from './GERAL/GeralComponent';
-import ObservaçõesComponent from './DIAGNOSTICO/ObservaçõesComponents';
+import ObservaçõesComponent from './DIAGNOSTICO/DiagnosticosComponents';
 import DispositivosComponent from './DISPOSITIVOS/DispositivosComponets';
 import ButtonJanelaComponent from '../components/janelasButton/ButtonJanelaComponent';
 import Gerenciamento from './Gerenciamento/GerenciamentoComponent'
@@ -46,7 +46,7 @@ function MAINJANELA() {
           isActive={activeButton === 'Gerenciamento'}
         />
         <ButtonJanelaComponent
-          descrição='Observações'
+          descrição='Diagnostico'
           botaoClicado={showObservações}
           isActive={activeButton === 'Observações'}
         />
