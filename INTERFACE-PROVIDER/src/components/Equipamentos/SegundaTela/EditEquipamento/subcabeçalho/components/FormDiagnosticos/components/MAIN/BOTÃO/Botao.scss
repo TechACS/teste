@@ -1,19 +1,19 @@
 .Diagnosticos-Ping {
     display: flex;
-    flex-direction: row;
+  
     gap: 15px;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     background-color: #f9f9f9;
-    margin: 0 auto;
+   
     box-sizing: border-box;
-    flex-wrap: wrap; // Permite que os itens se movam para a linha seguinte se necessário
+     // Permite que os itens se movam para a linha seguinte se necessário
   }
   
   .Diagnosticos-Ping-1 {
-    display: flex;
-    flex-direction: column;
+  
+   
     gap: 5px;
     flex: 1; // Permite que esta seção expanda para preencher o espaço disponível
   }
@@ -22,7 +22,7 @@
     display: flex;
     gap: 15px;
     flex: 1; // Permite que esta seção expanda para preencher o espaço disponível
-    flex-wrap: wrap; // Permite que os itens se movam para a linha seguinte se necessário
+     // Permite que os itens se movam para a linha seguinte se necessário
   }
   
   .Diagnosticos-Ping-2 > div {
@@ -46,16 +46,26 @@
   }
   
   #btn-ping {
-    border: none;
-    background-color: #007bff;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 4px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
-    flex: 1; // Permite que o botão ocupe o espaço disponível na linha
-    min-width: 100px; // Define uma largura mínima para o botão
+    
+    align-items: end;
+    display: flex;
+   
+    button{
+      border: none;
+      background-color: #007bff;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 4px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.3s;
+      flex: 1; // Permite que o botão ocupe o espaço disponível na linha
+     // Define uma largura mínima para o botão
+     height: 45px;
+      
+
+    }
+    
   }
   
   button:hover {

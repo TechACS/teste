@@ -51,7 +51,7 @@ function MAINJANELA() {
           isActive={activeButton === 'Observações'}
         />
         <ButtonJanelaComponent
-          descrição='Dispositivos'
+          descrição='Arquivos'
           botaoClicado={showDispositivos}
           isActive={activeButton === 'Dispositivos'}
         />

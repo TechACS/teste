@@ -21,7 +21,11 @@ function Botao() {
                 <input type="number" name="" id="" />
             </div>
 
-            <button id='btn-ping'>iniciar</button>
+            <span id='btn-ping'>
+              
+               <button >iniciar</button>
+            </span>
+            
      
        </div>
            
