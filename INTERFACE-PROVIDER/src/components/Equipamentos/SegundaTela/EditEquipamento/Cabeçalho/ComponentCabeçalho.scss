@@ -1,17 +1,23 @@
 .ComponentCabeçalho-dispositivo{
 
-display: flex;
-
+    display: flex;
+ gap: 20px;
    
 }
-
+.ComponentCabeçalho-dispositivo-1 {
+    display: flex;
+    flex-direction: column;
+}
 #iconrouter{
 
    
 border: 1px solid;
 
 }
-
+.ComponentCabeçalho-dispositivo-2{
+    display: flex;
+    gap: 20px;
+}
 
 
 
