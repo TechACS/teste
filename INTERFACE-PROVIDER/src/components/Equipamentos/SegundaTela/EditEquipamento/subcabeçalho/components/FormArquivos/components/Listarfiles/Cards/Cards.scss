@@ -1,0 +1,37 @@
+.FormArquivos-card{
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    background-color:  #ffffff;
+   
+    padding: 10px;
+    display: flex;
+    margin-bottom: 10px;
+}
+#file-icon{
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    background-color: #ffffff;
+   width: 40px;
+    padding: 10px;
+    justify-content: center;
+    display: flex;
+}
+.FormArquivos-card-1{
+    
+    gap: 20px;
+
+    flex: 1;
+    display: flex;
+}
+
+.FormArquivos-card-2{
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    flex: 1;
+    display: flex;
+    padding: 20px;
+    justify-content: space-between;
+    align-items: center;
+    height: 20px;
+}

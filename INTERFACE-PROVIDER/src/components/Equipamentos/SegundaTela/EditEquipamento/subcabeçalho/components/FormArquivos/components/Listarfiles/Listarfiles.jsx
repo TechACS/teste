@@ -6,12 +6,13 @@ function Listarfiles() {
   return (
     <div className='FormAquivos-Listarfiles'>
         
-       <div>
+       <div id='info-file'>
          <h2>
             Seus aquivos
          </h2>
        </div>
 
+        <Cards></Cards>
         <Cards></Cards>
     </div>
   )

@@ -1,5 +1,7 @@
 import React from 'react'
 import './Cards.scss';
+import { FaRegFileAlt } from "react-icons/fa";
+
 
 import { CiTrash } from "react-icons/ci";
 function Cards() {
@@ -7,19 +9,18 @@ function Cards() {
     <div className='FormArquivos-card'>
         
         <div className='FormArquivos-card-1'>
-            <div>
-                icon
+            <div id='file-icon'>
+            <FaRegFileAlt />
             </div>
 
-            <div>
+            <div className='FormArquivos-card-2'>
                 <span>
                     nome
                 </span>
                 <span>
                    <CiTrash />
                 </span>
-            </div>
-            
+            </div>            
         </div>
 
        
