@@ -1,8 +1,8 @@
 import React from 'react'
 import JanelasBackground from '../../components/janelasBackground/janelasBackground';
-import './DispositivosComponets';
-import FormDispositivos from '../../components/FormDispositivos/FormDispositivos';
-function DispositivosComponets() {
+import './Arquivos';
+import FormDispositivos from '../../components/FormArquivos/FormArquivos';
+function ArquivosComponets() {
   return (
     <div className='DispositivosComponets'>
           <JanelasBackground>
@@ -12,4 +12,4 @@ function DispositivosComponets() {
   )
 }
 
-export default DispositivosComponets
+export default ArquivosComponets

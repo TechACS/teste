@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './MAIN.scss';
 import GeralComponent from './GERAL/GeralComponent';
 import ObservaçõesComponent from './DIAGNOSTICO/DiagnosticosComponents';
-import DispositivosComponent from './DISPOSITIVOS/DispositivosComponets';
+import DispositivosComponent from './ARQUIVOS/ArquivosComponets';
 import ButtonJanelaComponent from '../components/janelasButton/ButtonJanelaComponent';
 import Gerenciamento from './Gerenciamento/GerenciamentoComponent'
 function MAINJANELA() {

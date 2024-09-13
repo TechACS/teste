@@ -1,7 +1,7 @@
 import React from 'react'
 import ButtonJanelaComponent from '../../components/janelasButton/ButtonJanelaComponent.jsx';
-import DispositivosComponets from './DispositivosComponets.jsx';
-function Dispositivos() {
+import DispositivosComponets from './ArquivosComponets.jsx';
+function Arquivos() {
 
   
   return (
@@ -14,4 +14,4 @@ function Dispositivos() {
   )
 }
 
-export default Dispositivos
+export default Arquivos
