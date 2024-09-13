@@ -1,15 +1,19 @@
 import React from 'react';
 import './componentCabeçalho.scss';
-import ModelViewer from './components/foto3D/ModelViewer';
+import { BsRouter } from "react-icons/bs";
+
 function ComponentCabeçalho() {
   return (
     <div className='ComponentCabeçalho-dispositivo'>
-    
-
-    <div id='router'>
-    <ModelViewer />
+      
+      <div id='iconrouter'>
+      <BsRouter style={{width : '80px', height: '70px',  padding: '10px'}}/>
+      </div>
+   
+    <div>
+        <h1>scsdcd</h1>
     </div>
-     
+   
     </div>
   )
 }

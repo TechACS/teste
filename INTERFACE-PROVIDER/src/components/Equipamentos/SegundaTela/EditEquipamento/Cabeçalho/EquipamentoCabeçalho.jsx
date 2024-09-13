@@ -7,7 +7,7 @@ function editclientCabeçalho({chinldrem}) {
     <div>
             <BackgroundComponente>
 
-            <ModelViewer />
+           
               <ComponentCabeçalho></ComponentCabeçalho>
             </BackgroundComponente>
            
