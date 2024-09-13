@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Upload.scss'; // Importe o arquivo de estilos
-
+import { AiOutlineCloudUpload } from "react-icons/ai";
 function Upload() {
   const [fileName, setFileName] = useState('');
 
@@ -36,8 +36,11 @@ function Upload() {
         id="fileInput" 
         className="file-input" 
         onChange={handleFileChange} 
+        
       />
       <label htmlFor="fileInput" className="upload-label">
+      
+      <AiOutlineCloudUpload style={{width : '250px', height : '250px',   opacity: '0.1' }}/>
         {fileName ? fileName : 'Arraste e solte um arquivo aqui ou clique para selecionar'}
       </label>
     </div>
