@@ -1,16 +1,16 @@
 import React from 'react'
 import BackgroundComponente from '../../../../Background/Cabeçalho/BackgroundComponenteCabeçalho'
 import ComponentCabeçalho from './ComponentCabeçalho';
-function editclientCabeçalho() {
+import ModelViewer from './components/foto3D/ModelViewer';
+function editclientCabeçalho({chinldrem}) {
   return (
     <div>
             <BackgroundComponente>
-            <ComponentCabeçalho>
-              <h1>sdcsdcdscd</h1>
-              </ComponentCabeçalho>
-                
+
+            <ModelViewer />
+              <ComponentCabeçalho></ComponentCabeçalho>
             </BackgroundComponente>
-          
+           
     </div>
   )
 }
