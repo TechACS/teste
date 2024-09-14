@@ -20,7 +20,12 @@ function Cards() {
                 <span>
                    <CiTrash />
                 </span>
-            </div>            
+                
+            </div>   
+           
+               <button>Enviar</button>       
+            
+            
         </div>
 
        

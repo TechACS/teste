@@ -22,6 +22,24 @@
 
     flex: 1;
     display: flex;
+
+    button{
+        width: 80px;
+        border-radius: 8px;
+        border: none;
+        background-color: #00c3ff;
+        color: #ffffff;
+        &:hover {
+            background-color: #049dcc; /* Azul um pouco mais escuro ao passar o mouse */
+            transform: scale(1.05); /* Efeito de zoom suave */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+        }
+    
+        &:focus {
+            outline: none; /* Remove o contorno padrão ao focar */
+            box-shadow: #00c3ff; /* Sombra para foco */
+        }
+    }
 }
 
 .FormArquivos-card-2{
