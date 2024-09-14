@@ -2,6 +2,7 @@
 
     display: flex;
  gap: 20px;
+ align-items: center;
    
 }
 .ComponentCabeçalho-dispositivo-1 {
@@ -16,9 +17,14 @@ border: 1px solid;
 }
 .ComponentCabeçalho-dispositivo-2{
     display: flex;
+    flex-direction: column;
     gap: 20px;
 }
-
+.ComponentCabeçalho-dispositivo-3{
+    display: flex;
+   
+    gap: 250px;
+}
 
 
 

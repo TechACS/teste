@@ -24,23 +24,28 @@ function ComponentCabeçalho() {
                 <h3>id equipamentos</h3>
             </div>
             
-          <div>
+            <div className='ComponentCabeçalho-dispositivo-3'>
 
-            <h3>usuario</h3>
+            <div>
 
-          </div>
+            <h3>usuario:</h3>
 
-          <div>
+            </div>
 
-            <h3>serial</h3>
+            <div>
 
-          </div>
+            <h3>seria:</h3>
 
-          <div>
+            </div>
 
-            <h3>modelo</h3>
+            <div>
 
-          </div>
+            <h3>modelo:</h3>
+
+            </div>
+
+            </div>
+         
     </div>   
    
    
