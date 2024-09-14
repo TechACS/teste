@@ -9,6 +9,7 @@
   border-radius: 10px;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Sombra mais pronunciada */
   height: 80%;
+
  
 }
 
@@ -45,6 +46,7 @@
   margin-bottom: 0px; /* Espaçamento abaixo de cada item */
   transition: background 0.3s ease, transform 0.3s ease;
   cursor: pointer; /* Adiciona cursor pointer */
+  margin-bottom: 3px;
 }
 
 .client-item:hover {
