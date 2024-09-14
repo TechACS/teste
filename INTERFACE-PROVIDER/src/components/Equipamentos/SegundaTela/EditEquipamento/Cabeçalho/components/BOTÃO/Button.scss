@@ -1,25 +1,89 @@
-.ComponentCabeçalho-Button{
+.ComponentCabeçalho-Button {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  flex: 1;
-    background: #ffffff;
-        border-radius: 8px;
-        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
-        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
-     
-        gap: 10px;
-      
-}
-button{
-    border: none;
+    align-items: end; /* Centraliza os itens horizontalmente */
+    flex: 1;
+    margin-top: -16px;
+    gap: 10px;
     padding: 10px;
+}
+
+.ComponentCabeçalho-Button-2 button {
+    display: flex;
+    align-items: center; /* Alinha ícone e texto verticalmente */
+    justify-content: center; /* Centraliza o texto e o ícone horizontalmente */
+    border: none;
+    padding: 8px 16px; /* Ajuste o padding conforme necessário */
     border-radius: 8px;
     width: 150px;
-   
- 
+    background-color: #00aaff; /* Azul claro e vibrante */
+    color: #fff; /* Cor do texto branca */
+    font-size: 16px; /* Tamanho da fonte */
+    font-weight: 500; /* Peso da fonte */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s; /* Transições suaves */
+    
+    /* Estilo dos ícones */
+    svg {
+        margin-right: 8px; /* Espaçamento entre ícone e texto */
+        font-size: 18px; /* Tamanho do ícone */
+    }
+
+    &:hover {
+        background-color: #0889c9; /* Azul um pouco mais escuro ao passar o mouse */
+        transform: scale(1.05); /* Efeito de zoom suave */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    }
+
+    &:focus {
+        outline: none; /* Remove o contorno padrão ao focar */
+        box-shadow: #00aaff; /* Sombra para foco */
+    }
 }
-.ComponentCabeçalho-Button-1{
-    gap: 10px;
+.ComponentCabeçalho-Button-1 button {
+    display: flex;
+    align-items: center; /* Alinha ícone e texto verticalmente */
+    justify-content: center; /* Centraliza o texto e o ícone horizontalmente */
+    border: none;
+    padding: 8px 16px; /* Ajuste o padding conforme necessário */
+    border-radius: 8px;
+    width: 150px;
+    background-color: #00aaff; /* Azul claro e vibrante */
+    color: #fff; /* Cor do texto branca */
+    font-size: 16px; /* Tamanho da fonte */
+    font-weight: 500; /* Peso da fonte */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s; /* Transições suaves */
+    
+    /* Estilo dos ícones */
+    svg {
+        margin-right: 8px; /* Espaçamento entre ícone e texto */
+        font-size: 18px; /* Tamanho do ícone */
+    }
+
+    &:hover {
+        background-color: #0889c9; /* Azul um pouco mais escuro ao passar o mouse */
+        transform: scale(1.05); /* Efeito de zoom suave */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    }
+
+    &:focus {
+        outline: none; /* Remove o contorno padrão ao focar */
+        box-shadow: #00aaff; /* Sombra para foco */
+    }
+}
+#ComponentCabeçalho-Button-trash{
+ 
+        background: #dc3545;
+  
+        &:hover {
+          background: #c82333; // Cor do botão ao passar o mouse
+          transform: scale(1.05); // Efeito de zoom suave
+        }
+}
+.ComponentCabeçalho-Button-1,
+.ComponentCabeçalho-Button-2 {
+    display: flex;
+    gap: 15px; /* Espaçamento entre botões */
+    align-items: center; /* Centraliza os botões verticalmente dentro dos seus contêineres */
 }

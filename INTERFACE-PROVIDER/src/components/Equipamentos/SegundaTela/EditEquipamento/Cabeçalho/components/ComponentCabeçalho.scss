@@ -2,12 +2,13 @@
 
     display: flex;
  gap: 20px;
- align-items: center;
+
    
 }
 .ComponentCabeçalho-dispositivo-1 {
     display: flex;
     flex-direction: column;
+    
 }
 #iconrouter{
 
@@ -18,14 +19,49 @@ border: 1px solid;
 .ComponentCabeçalho-dispositivo-2{
     display: flex;
     flex-direction: column;
-    gap: 20px;
-}
-.ComponentCabeçalho-dispositivo-3{
-    display: flex;
    
-    gap: 250px;
+    margin-top: 10px;
+   
+  
+    h3 {
+        margin: 0; /* Remove a margem padrão */
+        font-size: 15px;
+       
+    }
+    gap: 20px;
+    
+}
+.ComponentCabeçalho-dispositivo-3 {
+    display: flex;
+    justify-content: space-between; /* Distribui o espaço entre os itens */
+    /* Permite que os itens se movam para a linha seguinte se não houver espaço suficiente */
+   /* Ajusta o espaçamento interno entre os itens */
 }
 
+.ComponentCabeçalho-dispositivo-3 > div {
+    flex: 1; /* Permite que cada item ocupe o espaço disponível */
+    min-width: 150px; /* Define uma largura mínima para evitar que fiquem muito pequenos */
+   
+}
+
+
+
+@media (max-width: 768px) {
+    .ComponentCabeçalho-dispositivo-3 {
+        flex-direction: column; /* Altera para coluna em telas menores */
+        align-items: center; /* Centraliza os itens horizontalmente */
+     
+    }
+
+    .ComponentCabeçalho-dispositivo-3 > div {
+        min-width: auto; /* Remove a largura mínima em telas menores */
+        flex: none; /* Remove o crescimento flexível */
+    }
+
+    h3 {
+        font-size: 1.25rem; /* Ajusta o tamanho da fonte em telas menores */
+    }
+}
 
 
 
