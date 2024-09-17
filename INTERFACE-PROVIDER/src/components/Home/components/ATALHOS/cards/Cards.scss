@@ -1,0 +1,32 @@
+.HomeComponents{
+    background: #ffffff;
+        border-radius: 8px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+
+    padding: 25px;
+    font-size: 10px;
+   
+    flex: 1;
+   
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin-top: 120px;
+   text-decoration: none;
+  
+  
+   
+}
+.HomeComponents-1{
+    align-items: center;
+    justify-content: space-around;
+    display: flex;
+    gap: 25px;    
+  
+
+    h1{
+        color: black;
+    }
+
+
+}

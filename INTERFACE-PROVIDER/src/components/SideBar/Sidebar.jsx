@@ -42,7 +42,7 @@ function Sidebar() {
 
   // Dados dos tópicos e sub-tópicos
   const topics = [
-    { name: 'Home', path: '/' },
+    { name: 'Home', path: '/home' },
     { name: 'cliente', path: '/cliente' },
     { name: 'equipamentos', path: '/equipamentos' },
     {

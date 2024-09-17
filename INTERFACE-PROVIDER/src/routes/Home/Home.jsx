@@ -2,26 +2,12 @@
 import React from 'react';
 import './Home.scss';
 
+import HomeComponents from '../../components/Home/HomeComponents';
 function Home() {
   return (
     <div className='teste'>
 
-      <div className='cabecalho'>
-
-        <div className='cabecalhoh1'>
-          <h1>Arquivos topsapp</h1>
-          <hr />
-        </div>
-
-      </div>
-
-      <div className='subcabecalho'>
-
-  
-      
-      </div>
-  
-      
+        <HomeComponents></HomeComponents>
       
     </div>
   );
