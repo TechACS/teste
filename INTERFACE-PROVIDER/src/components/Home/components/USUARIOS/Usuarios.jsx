@@ -1,7 +1,7 @@
 import React from 'react'
 import './Usuarios.scss';
 
-import listarUsuario from './listarUsuario';
+import ListarUsuario from './ListarUsuario';
 function Usuarios() {
   return (
     <div>
@@ -11,8 +11,9 @@ function Usuarios() {
                     <h1>Grafico Devices</h1>
                 </div>
                 <div className='UsuariosOnlineHOME-2'>
-                    <listarUsuario usuario="teste"></listarUsuario>
+                   <ListarUsuario usuario="sdsfsfcsd" ></ListarUsuario>
                 </div>
+              
             </div>
     </div>
   )

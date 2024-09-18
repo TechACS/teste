@@ -1,7 +1,6 @@
 import React from 'react'
 import './MainGrafico.scss';
 
-import BackGround from '../../../Background/SubCabeçalho/BackgroundComponenteSubcabeçalho';
 
 import Online from './ONLINE/Online';
 import QTDEquipamentos from './QTDEquipamentos/QTDEquipamentos';
@@ -11,7 +10,7 @@ function MainGrafico() {
     <div className=''>
        
         
-           <BackGround>
+         
             <div className='MainGraficoDevide-1'>
                 <div id='MainGraficoDevide-h1'>
                     <h1>Grafico Devices</h1>
@@ -25,7 +24,7 @@ function MainGrafico() {
            
 
             
-           </BackGround>
+          
     </div>
   )
 }
