@@ -34,27 +34,24 @@ const data = {
 
 const options = {
   responsive: true,
+  maintainAspectRatio: false, // Para permitir que o gráfico ajuste tanto altura quanto largura
   plugins: {
     legend: {
       position: 'top',
     },
     title: {
       display: true,
-      text: 'Chart.js Pie Chart Example',
+      text: 'Gráfico Circular Responsivo',
     },
   },
 };
 
-function QTDEquipamentos() {
+const QTDEquipamentos = () => {
   return (
-    <div>
-      <h2>Gráfico Circular</h2>
-      <div style={{ width: '250px', height: '250px' }}>
+    <div style={{ width: '100%', maxWidth: '400px', height: 'auto' }}>
       <Pie data={data} options={options} />
-      </div>
-     
     </div>
   );
-}
+};
 
 export default QTDEquipamentos

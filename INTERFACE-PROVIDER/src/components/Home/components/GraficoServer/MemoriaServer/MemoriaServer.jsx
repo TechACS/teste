@@ -45,7 +45,7 @@ const options = {
   },
 };
 
-const Online = () => {
+const MemoriaServer = () => {
   return (
     <div style={{ width: '100%', maxWidth: '400px', height: 'auto' }}>
       <Pie data={data} options={options} />
@@ -53,4 +53,4 @@ const Online = () => {
   );
 };
 
-export default Online;
+export default MemoriaServer;

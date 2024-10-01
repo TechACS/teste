@@ -1,4 +1,5 @@
-import React from 'react';
+import React from 'react'
+
 import { Pie } from 'react-chartjs-2';
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 
@@ -45,12 +46,11 @@ const options = {
   },
 };
 
-const Online = () => {
+const DiscoServer = () => {
   return (
     <div style={{ width: '100%', maxWidth: '400px', height: 'auto' }}>
       <Pie data={data} options={options} />
     </div>
   );
 };
-
-export default Online;
+export default DiscoServer

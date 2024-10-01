@@ -1,4 +1,4 @@
-.MainGraficoContainer {
+.MainGraficoServerContainer {
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -6,23 +6,24 @@
   }
   
   /* Novo container flexível para alinhar gráficos e ServerHome lado a lado */
-  .MainGraficoContent {
+  .MainGraficoServerContent {
     display: flex;
     gap: 20px;
     align-items: flex-start; /* Alinha os gráficos e o ServerHome no topo */
   }
   
-  .MainGraficoDevide-1 {
+  .MainGraficoServer-1 {
     background: #ffffff;
     border-radius: 8px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
     padding: 20px;
     position: relative;
+    justify-content: center;
     flex: 2; /* Deixa os gráficos ocuparem mais espaço */
     min-width: 300px;
   }
   
-  #MainGraficoDevide-h1 {
+  #MainGraficoServer-h1 {
     background-color: #ffffff;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
     border-bottom: 1px solid rgb(211, 209, 209);
@@ -34,20 +35,23 @@
   .scrollWrapper {
     display: flex;
     align-items: center;
-    justify-content: center;
     position: relative;
     overflow: hidden;
     width: 100%;
     margin-top: 20px;
   }
   
-  .MainGraficoDevide-2 {
+  .MainGraficoServer-2 {
     display: flex;
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    align-items: center; /* Centraliza os itens verticalmente (caso necessário) */
     gap: 20px;
-    overflow-x: hidden; /* Permitir rolagem horizontal */
+    overflow-x: hidden; /* Evita a rolagem horizontal */
     scroll-behavior: smooth;
-    flex-wrap: nowrap; /* Impedir quebra de linha dos gráficos */
+    flex-wrap: nowrap; /* Mantém os itens em linha */
+    height: 100%; /* Certifique-se que o container tenha altura */
   }
+  
   
   .scrollButton {
     background-color: #f0f0f0;
@@ -71,9 +75,9 @@
   
   /* Container flexível para o ServerHome */
   .ServerHomeContainer {
-    /* ServerHome ocupa menos espaço comparado aos gráficos */
-    display: flex;
-    align-items: center; /* Centraliza verticalmente o ServerHome */
+   
+  gap: 20px;
+   
   }
   
   /* Estilos em telas menores */
@@ -82,13 +86,13 @@
       flex-direction: column; /* Empilha gráficos e ServerHome em telas pequenas */
     }
   
-    .MainGraficoDevide-2 {
+    .MainGraficoServer-2 {
       gap: 0; /* Remove o espaço entre os gráficos */
       overflow-x: hidden;
       scroll-snap-type: x mandatory; /* Navegação suave entre os gráficos */
     }
   
-    .MainGraficoDevide-2 > div {
+    .MainGraficoServer-2 > div {
       flex: 0 0 100%; /* Um gráfico por vez na tela */
       scroll-snap-align: start; /* Encaixar os gráficos ao rolar */
     }

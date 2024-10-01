@@ -4,7 +4,8 @@ import AtalhosMain from './components/ATALHOS/AtalhosMain';
 import BackGround from '../Background/SubCabeçalho/BackgroundComponenteSubcabeçalho';
 
 import MainGrafico from './components/GraficoDevice/MainGrafico';
-import Usuarios from './components/USUARIOS/Usuarios';
+import MainServer from './components/GraficoServer/MainServer';
+
 function HomeComponents() {
   return (
     <div>
@@ -14,7 +15,11 @@ function HomeComponents() {
            <BackGround>
            
             <MainGrafico></MainGrafico>
-              
+
+            <div className='MainServerHome'> 
+            <MainServer></MainServer> 
+            </div>
+            
               
         
                     

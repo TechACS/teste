@@ -1,19 +1,21 @@
 import React, { useRef } from 'react';
-import './MainGrafico.scss';
-import ServerHome from '../Server/ServerClienteHome';
-import Online from './ONLINE/Online';
-import QTDEquipamentos from './QTDEquipamentos/QTDEquipamentos';
-import Sinal from './Sinal/Sinal';
+import './MainServer.scss';
+import ServeraRedeHome from '../Server/ServeraRedeHome';
+import DiscoServer from './DiscoServer/DiscoServer';
+import MemoriaServer from './MemoriaServer/MemoriaServer';
 
 import { FaArrowLeft } from "react-icons/fa";
 import { FaArrowRight } from "react-icons/fa";
-function MainGrafico() {
+
+
+function MainServer() {
   const scrollRef = useRef(null);
 
   const scrollLeft = () => {
     scrollRef.current.scrollBy({
       left: -200, // Ajusta a quantidade de rolagem
       behavior: 'smooth',
+      
     });
   };
 
@@ -25,12 +27,12 @@ function MainGrafico() {
   };
 
   return (
-    <div className="MainGraficoContainer">
+    <div className="MainGraficoServerContainer">
       {/* Novo container flexível para alinhar os gráficos e o ServerHome */}
-      <div className="MainGraficoContent">
-        <div className="MainGraficoDevide-1">
-          <div id="MainGraficoDevide-h1">
-            <h1>Gráfico Devices</h1>
+      <div className="MainGraficoServerContent">
+        <div className="MainGraficoServer-1">
+          <div id="MainGraficoServer-h1">
+            <h1>Gráfico Server</h1>
           </div>
 
           {/* Container dos gráficos */}
@@ -40,10 +42,10 @@ function MainGrafico() {
             </button>
 
             {/* Apenas os gráficos estão dentro da rolagem */}
-            <div className="MainGraficoDevide-2" ref={scrollRef}>
-              <Online />
-              <QTDEquipamentos />
-              <Sinal />
+            <div className="MainGraficoServer-2" ref={scrollRef}>
+              <DiscoServer />
+             
+              <MemoriaServer />
             </div>
 
             <button className="scrollButton right" onClick={scrollRight}>
@@ -54,12 +56,12 @@ function MainGrafico() {
 
         {/* O ServerHome agora está no mesmo container flexível */}
         <div className="ServerHomeContainer">
-        <ServerHome />
-
+        <ServeraRedeHome />
+        <ServeraRedeHome />
         </div>
       </div>
     </div>
   );
 }
 
-export default MainGrafico;
+export default MainServer;

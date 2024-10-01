@@ -1,0 +1,36 @@
+.CompcardHome-0{
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    flex: 1;
+    min-width: 250px;
+  
+}
+#CompcardHome-h1{
+    background-color: #ffffff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgb(211, 209, 209);
+    text-align: center;
+    font-size: 15px;
+    padding: 5px;
+    
+}
+.compcardh1 {
+    
+    h1 {
+      padding: 10px;  // Espaçamento interno do h1
+      border-bottom: 1px solid #d3d3d3;  // Borda cinza fraca
+      border-radius: 5px;  // Canto levemente arredondado
+      font-size: 18px;  // Tamanho do texto
+    
+      background-color: #ffffff;  // Fundo leve
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);  // Sombra suave para destacar
+      transition: transform 0.5s ease, box-shadow 0.3s ease;
+  
+      &:hover {
+        transform: scale(1.02);  // Efeito de leve aumento ao passar o mouse
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);  // Sombra mais forte ao hover
+      }
+    }
+  }
+  
