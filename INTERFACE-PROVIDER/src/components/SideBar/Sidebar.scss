@@ -1,104 +1,109 @@
-/* Estilo padrão para a sidebar */
 .sidebar {
-  width: 280px; /* Largura padrão para telas maiores */
+  width: 280px; /* Largura padrão do sidebar */
   height: 100vh;
   background-color: #ffffff; /* Fundo branco */
-  color: #333333; /* Texto cinza escuro */
+  color: #333333; /* Texto em cinza escuro */
   position: fixed;
-  top: 69px;
+  top: 69px; /* Ajusta a posição */
   left: 0;
   transition: width 0.3s;
-  overflow: hidden;
+  overflow: hidden; /* Evita que o conteúdo transborde */
   display: flex;
   flex-direction: column;
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Sombra leve */
-  z-index: 1000; /* Fica acima de outros elementos */
-text-decoration: none;
+  z-index: 1000;
+
   &.collapsed {
-    width: 25px; /* Largura reduzida quando colapsada */
+    width: 60px; /* Largura quando colapsado */
     .content {
-      display: none; /* Esconde o conteúdo quando colapsada */
+      display: none; /* Esconde o conteúdo quando colapsado */
     }
   }
 
   .toggle-btn {
     background: none;
     border: none;
-    color: #333333; /* Cor do texto do botão */
+    color: #333333;
     font-size: 20px;
     cursor: pointer;
     padding: 10px;
     margin: 10px;
     align-self: flex-end;
     transition: transform 0.3s;
-
-    &:focus {
-      outline: none;
-    }
   }
 
   .content {
-    padding: 20px;
-
+    padding: 0; /* Remove o padding */
+    display: flex;
+    flex-direction: column; /* Garante que os tópicos fiquem um abaixo do outro */
+    gap: 0; /* Remove qualquer espaçamento entre os tópicos */
+    
     .servidores {
-      cursor: pointer; /* Cursor indicando que é clicável */
-    }
-
-    .subtopics {
+      cursor: pointer;
       display: flex;
       flex-direction: column;
     }
 
-    .card-link {
-      text-decoration: none;
+    .topic-link, h1 {
+      display: block; /* Garante que o tópico ocupe uma linha completa */
+      text-decoration: none; /* Remove sublinhado */
       width: 100%;
-      margin-bottom: 15px;
-      text-decoration: none;
-    }
-
-    .card {
-      margin-left: 25px;
-      color: #333333; /* Texto cinza escuro */
-      border-radius: 8px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra leve */
-      padding: 15px;
-      width: 90%;
-      transition: box-shadow 0.3s, background-color 0.3s;
+      padding: 15px; /* Adiciona espaçamento interno */
+      background-color: #ffffff; /* Cor de fundo */
+      color: #333333; /* Cor de texto */
+      border-bottom: 1px solid #e0e0e0; /* Linha para separar os tópicos */
+      font-size: 18px; /* Tamanho do texto */
+      font-weight: normal; /* Peso da fonte */
+      transition: background-color 0.3s;
 
       &:hover {
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15); /* Sombra mais intensa ao passar o mouse */
-        background-color: #f9f9f9; /* Cor de fundo mais clara ao passar o mouse */
+        background-color: #f9f9f9; /* Efeito hover */
       }
+    }
 
-      h1 {
-        margin: 0;
-        font-size: 16px;
-        text-align: center;
-        border-radius: 4px;
-        text-decoration: none;
-         /* Bordas arredondadas */
+    .subtopics {
+      display: flex;
+      flex-direction: column; /* Coloca os sub-tópicos um abaixo do outro */
+      padding-left: 20px; /* Recuo para diferenciar dos tópicos principais */
+      background-color: #f5f5f5; /* Fundo mais claro para sub-tópicos */
+    }
+
+    .card-link {
+      display: block; /* Garante que o sub-tópico ocupe uma linha completa */
+      text-decoration: none;
+      width: 100%;
+      margin: 5px 0; /* Margem entre os sub-tópicos */
+      padding: 10px;
+      background-color: #ffffff; /* Fundo branco */
+      color: #333333; /* Texto em cinza escuro */
+      font-size: 16px;
+      border-left: 3px solid #e0e0e0; /* Barra lateral para destacar os sub-tópicos */
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: #f0f0f0; /* Efeito hover */
       }
     }
   }
 }
 
-/* Responsividade para telas menores que 750px */
+/* Responsividade */
 @media (max-width: 750px) {
   .sidebar {
-    width: 55px; /* Largura reduzida em telas menores que 750px */
-    .content {
-      display: none; /* Esconde o conteúdo em telas menores que 750px */
-    }
-  }
-}
-
-/* Responsividade para telas menores que 430px */
-@media (max-width: 430px) {
-  .sidebar {
-    width: 45%; /* Largura ajustada em telas menores que 430px */
+    width: 60px;
   }
 
   .sidebar.collapsed {
-    width: 25px; /* Largura reduzida quando colapsada em telas menores que 430px */
+    width: 40px;
+  }
+}
+
+@media (max-width: 430px) {
+  .sidebar {
+    width: 45%; /* Largura ajustada para telas menores */
+  }
+
+  .sidebar.collapsed {
+    width: 40px; /* Sidebar colapsado em telas pequenas */
   }
 }

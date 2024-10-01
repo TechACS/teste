@@ -1,32 +1,22 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { FaChevronDown, FaChevronRight, FaBars } from 'react-icons/fa'; // Ícones modernos
 import './Sidebar.scss';
 import SidebarTopic from './componente/SidebarTopic';
-
+import { BsPinAngleFill } from "react-icons/bs";
 function Sidebar() {
   const [isCollapsed, setIsCollapsed] = useState(false); // Começa aberto por padrão
-  const [visibleSubtopics, setVisibleSubtopics] = useState({
-    servidores: false,
-    migracao: false,
-    Home: false,
-    Bancodedados: false,
-  });
-
+  const [visibleSubtopics, setVisibleSubtopics] = useState({});
+  
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth <= 430) {
         setIsCollapsed(true);
-      } else {
-        setIsCollapsed(false);
       }
     };
 
     window.addEventListener('resize', handleResize);
-    handleResize(); // Verifica o tamanho da tela ao montar
-
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
+    return () => window.removeEventListener('resize', handleResize);
   }, []);
 
   const toggleSidebar = () => {
@@ -40,23 +30,22 @@ function Sidebar() {
     }));
   };
 
-  // Dados dos tópicos e sub-tópicos
   const topics = [
     { name: 'Home', path: '/home' },
-    { name: 'cliente', path: '/cliente' },
-    { name: 'equipamentos', path: '/equipamentos' },
+    { name: 'Cliente', path: '/cliente' },
+    { name: 'Equipamentos', path: '/equipamentos' },
     {
-      name: 'gerencia adm',
+      name: 'Gerência ADM',
       subtopics: [
-        { path: '/CriarDocumentação', label: 'criar usuario' },
-        { path: '/FazerUpload', label: 'auditoria' },
+        { path: '/CriarDocumentacao', label: 'Criar Usuário' },
+        { path: '/Auditoria', label: 'Auditoria' },
       ],
     },
     {
-      name: 'server',
+      name: 'Server',
       subtopics: [
-        { path: '/CriarDocumentação', label: 'terminal' },
-        { path: '/FazerUpload', label: 'auditoria' },
+        { path: '/Terminal', label: 'Terminal' },
+        { path: '/Auditoria', label: 'Auditoria' },
       ],
     },
   ];
@@ -64,19 +53,20 @@ function Sidebar() {
   return (
     <div className={`sidebar ${isCollapsed ? 'collapsed' : 'expanded'}`}>
       <button className="toggle-btn" onClick={toggleSidebar}>
-        {isCollapsed ? '▶' : '◀'}
+        {isCollapsed ? <FaBars /> : <BsPinAngleFill />}
       </button>
 
       <div className="content">
         {topics.map((topic, index) => (
-          <SidebarTopic
-            key={index}
-            topic={topic.name}
-            path={topic.path}  // Adiciona a prop path
-            subtopics={topic.subtopics}
-            toggleSubtopics={toggleSubtopics}
-            visibleSubtopics={visibleSubtopics}
-          />
+          <div key={index} className="sidebar-topic">
+            <SidebarTopic
+              topic={topic.name}
+              path={topic.path}
+              subtopics={topic.subtopics}
+              toggleSubtopics={toggleSubtopics}
+              visibleSubtopics={visibleSubtopics}
+            />
+          </div>
         ))}
       </div>
     </div>
