@@ -20,6 +20,9 @@
     position: relative;
     flex: 2; /* Deixa os gráficos ocuparem mais espaço */
     min-width: 300px;
+    justify-content: center;
+    color: #333;
+    font-family: "Arial", sans-serif;
   }
   
   #MainGraficoDevide-h1 {
@@ -29,6 +32,8 @@
     text-align: center;
     font-size: 15px;
     padding: 5px;
+    color: #333;
+    font-family: "Arial", sans-serif;
   }
   
   .scrollWrapper {

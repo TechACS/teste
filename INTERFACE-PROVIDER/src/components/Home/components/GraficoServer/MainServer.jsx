@@ -7,6 +7,7 @@ import MemoriaServer from './MemoriaServer/MemoriaServer';
 import { FaArrowLeft } from "react-icons/fa";
 import { FaArrowRight } from "react-icons/fa";
 
+import Usuarios from '../usuarios/Usuarios';
 
 function MainServer() {
   const scrollRef = useRef(null);
@@ -46,6 +47,7 @@ function MainServer() {
               <DiscoServer />
              
               <MemoriaServer />
+              <MemoriaServer />
             </div>
 
             <button className="scrollButton right" onClick={scrollRight}>
@@ -57,7 +59,7 @@ function MainServer() {
         {/* O ServerHome agora está no mesmo container flexível */}
         <div className="ServerHomeContainer">
         <ServeraRedeHome />
-        <ServeraRedeHome />
+        <Usuarios />
         </div>
       </div>
     </div>

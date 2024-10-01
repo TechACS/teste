@@ -21,6 +21,8 @@
     justify-content: center;
     flex: 2; /* Deixa os gráficos ocuparem mais espaço */
     min-width: 300px;
+    color: #333;
+    font-family: "Arial", sans-serif;
   }
   
   #MainGraficoServer-h1 {
@@ -43,8 +45,7 @@
   
   .MainGraficoServer-2 {
     display: flex;
-    justify-content: center; /* Centraliza os itens horizontalmente */
-    align-items: center; /* Centraliza os itens verticalmente (caso necessário) */
+ 
     gap: 20px;
     overflow-x: hidden; /* Evita a rolagem horizontal */
     scroll-behavior: smooth;

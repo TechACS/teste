@@ -1,20 +1,19 @@
 import React from 'react'
 import './Usuarios.scss';
+import CompCard from "../componentesInfo/CompCard";
 
-import ListarUsuario from './ListarUsuario';
 function Usuarios() {
   return (
     <div>
-
-            <div className='UsuariosOnlineHOME-1'>
-                <div id='UsuariosOnlineHOME-h1'>
-                    <h1>Grafico Devices</h1>
-                </div>
-                <div className='UsuariosOnlineHOME-2'>
-                   <ListarUsuario usuario="sdsfsfcsd" ></ListarUsuario>
-                </div>
-              
-            </div>
+            <CompCard titulocomponente='Usuario Online' 
+            info1="user: xxx"
+            info2="user: xxxx"
+            info3="user: xxxx"
+            info4="user : xxxx"
+            info5="user : xxxx"
+            
+            ></CompCard>
+           
     </div>
   )
 }
