@@ -3,9 +3,12 @@ import './InformaçõesGerais.scss';
 function InformaçõesGerais() {
   return (
     <div className='InformaçõesGerais'>
+      <div>
         <h1>
-        InformaçõesGerais
+        Informações Gerais
         </h1>
+      </div>
+       
         </div>
   )
 }
