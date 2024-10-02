@@ -1,35 +1,45 @@
 .servidores {
-    margin-bottom: 25px;
+  margin-bottom: 25px;
+}
+
+.topic-link {
+  display: flex; /* Adiciona flexbox */
+  justify-content: space-between; /* Justifica os elementos para ocupar o espaço */
+  align-items: center; /* Alinha os itens verticalmente */
+  text-decoration: none; /* Remove o sublinhado do link */
+  padding-left: 50px; /* Adiciona espaçamento à esquerda */
+
+  span {
+    display: flex; /* Mantém o ícone flexível */
+    align-items: end; /* Alinha verticalmente o ícone */
   }
-  .topic-link {
-    text-decoration: none; /* Remove o sublinhado do link */
-    /* Usa a cor do texto pai */
+}
+
+.topicostyles h1 {
+  margin-bottom: 25px;
+  width: 80%;
+  text-align: center;
+  padding: 10px; /* Aumenta o padding para conforto */
+  background-color: #ffffff; /* Fundo branco */
+  color: #333333; /* Texto cinza escuro */
+  border-radius: 8px; /* Bordas arredondadas */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); /* Sombra leve */
+  font-size: 22px; /* Tamanho da fonte ajustado */
+  font-weight: 400; /* Peso da fonte ajustado */
+  line-height: 1.5; /* Aumenta a altura da linha para melhor leitura */
+  color: #222222; /* Cor de texto mais escura */
+  outline: none; /* Remove o contorno padrão ao focar */
+  resize: none; /* Desabilita o redimensionamento manual */
+  overflow: hidden; /* Esconde a barra de rolagem */
+  white-space: pre-wrap; /* Mantém a formatação do texto */
+  word-wrap: break-word; /* Quebra a linha conforme necessário */
+  transition: box-shadow 0.3s, background-color 0.3s, transform 0.3s; /* Transição suave */
+  text-decoration: none;
+
+  // Estilo para o hover
+  &:hover {
+    background-color: #f0f0f0; /* Cor de fundo mais clara para o efeito hover */
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1); /* Sombra mais intensa para destacar o hover */
+    transform: scale(1.09); /* Efeito de zoom sutil */
   }
-  .topicostyles h1 {
-    margin-bottom: 25px;
-    width: 80%;
-    text-align: center;
-    padding: 10px; /* Aumenta o padding para conforto */
-    background-color: #ffffff; /* Fundo branco */
-    color: #333333; /* Texto cinza escuro */
-    border-radius: 8px; /* Bordas arredondadas */
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); /* Sombra leve */
-    font-size: 22px; /* Tamanho da fonte ajustado */
-    font-weight: 400; /* Peso da fonte ajustado */
-    line-height: 1.5; /* Aumenta a altura da linha para melhor leitura */
-    color: #222222; /* Cor de texto mais escura */
-    outline: none; /* Remove o contorno padrão ao focar */
-    resize: none; /* Desabilita o redimensionamento manual */
-    overflow: hidden; /* Esconde a barra de rolagem */
-    white-space: pre-wrap; /* Mantém a formatação do texto */
-    word-wrap: break-word; /* Quebra a linha conforme necessário */
-    transition: box-shadow 0.3s, background-color 0.3s, transform 0.3s; /* Transição suave */
-    text-decoration: none;
-    // Estilo para o hover
-    &:hover {
-      background-color: #f0f0f0; /* Cor de fundo mais clara para o efeito hover */
-      box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1); /* Sombra mais intensa para destacar o hover */
-      transform: scale(1.09); /* Efeito de zoom sutil */
-    }
-  }
-  
+}

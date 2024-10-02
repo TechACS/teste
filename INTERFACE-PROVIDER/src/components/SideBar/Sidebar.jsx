@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { FaChevronDown, FaChevronRight, FaBars } from 'react-icons/fa'; // Ícones modernos
+import { FaBars } from 'react-icons/fa';
+import { BiSolidLeftArrow } from 'react-icons/bi';
+import { MdKeyboardArrowLeft, MdKeyboardArrowUp } from "react-icons/md"; // Importando os ícones
 import './Sidebar.scss';
 import SidebarTopic from './componente/SidebarTopic';
-import { BsPinAngleFill } from "react-icons/bs";
+
 function Sidebar() {
   const [isCollapsed, setIsCollapsed] = useState(false); // Começa aberto por padrão
   const [visibleSubtopics, setVisibleSubtopics] = useState({});
@@ -53,7 +55,7 @@ function Sidebar() {
   return (
     <div className={`sidebar ${isCollapsed ? 'collapsed' : 'expanded'}`}>
       <button className="toggle-btn" onClick={toggleSidebar}>
-        {isCollapsed ? <FaBars /> : <BsPinAngleFill />}
+        {isCollapsed ? <FaBars /> : <BiSolidLeftArrow />}
       </button>
 
       <div className="content">
@@ -65,6 +67,7 @@ function Sidebar() {
               subtopics={topic.subtopics}
               toggleSubtopics={toggleSubtopics}
               visibleSubtopics={visibleSubtopics}
+              isSubtopicsAvailable={topic.subtopics && topic.subtopics.length > 0} // Verifica se existem sub-tópicos
             />
           </div>
         ))}

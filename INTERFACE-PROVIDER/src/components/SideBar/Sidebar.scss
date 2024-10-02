@@ -1,22 +1,25 @@
 .sidebar {
-  width: 280px; /* Largura padrão do sidebar */
   height: 100vh;
   background-color: #ffffff; /* Fundo branco */
   color: #333333; /* Texto em cinza escuro */
   position: fixed;
-  top: 69px; /* Ajusta a posição */
+  top: 69px;
   left: 0;
   transition: width 0.3s;
-  overflow: hidden; /* Evita que o conteúdo transborde */
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Sombra leve */
   z-index: 1000;
+  width: 200px; /* Largura inicial padrão */
+  max-width: 300px; /* Limita o tamanho máximo da sidebar a 300px */
+  min-width: 50px; /* Tamanho mínimo da sidebar colapsada */
 
   &.collapsed {
-    width: 60px; /* Largura quando colapsado */
+    width: 50px; /* Largura quando colapsada */
+    
     .content {
-      display: none; /* Esconde o conteúdo quando colapsado */
+      display: none; /* Esconde o conteúdo quando colapsada */
     }
   }
 
@@ -33,77 +36,86 @@
   }
 
   .content {
-    padding: 0; /* Remove o padding */
+    padding: 0;
     display: flex;
-    flex-direction: column; /* Garante que os tópicos fiquem um abaixo do outro */
-    gap: 0; /* Remove qualquer espaçamento entre os tópicos */
-    
+    flex-direction: column; /* Coloca os tópicos um abaixo do outro */
+    gap: 0;
+
     .servidores {
       cursor: pointer;
       display: flex;
       flex-direction: column;
     }
 
+    /* Ajustando a formatação dos tópicos */
     .topic-link, h1 {
-      display: block; /* Garante que o tópico ocupe uma linha completa */
-      text-decoration: none; /* Remove sublinhado */
-      width: 100%;
-      padding: 15px; /* Adiciona espaçamento interno */
-      background-color: #ffffff; /* Cor de fundo */
-      color: #333333; /* Cor de texto */
-      border-bottom: 1px solid #e0e0e0; /* Linha para separar os tópicos */
-      font-size: 18px; /* Tamanho do texto */
-      font-weight: normal; /* Peso da fonte */
+      font-weight: normal; /* Remove o negrito */
+      display: block;
+      text-decoration: none;
+      padding: 15px;
+      background-color: #ffffff;
+      color: #333333;
+      border-bottom: 1px solid #e0e0e0;
+      font-size: 18px;
       transition: background-color 0.3s;
 
       &:hover {
-        background-color: #f9f9f9; /* Efeito hover */
+        background-color: #f9f9f9;
       }
     }
 
     .subtopics {
-      display: flex;
-      flex-direction: column; /* Coloca os sub-tópicos um abaixo do outro */
-      padding-left: 20px; /* Recuo para diferenciar dos tópicos principais */
-      background-color: #f5f5f5; /* Fundo mais claro para sub-tópicos */
+      padding-left: 20px;
+      background-color: #f5f5f5;
     }
 
     .card-link {
-      display: block; /* Garante que o sub-tópico ocupe uma linha completa */
-      text-decoration: none;
-      width: 100%;
-      margin: 5px 0; /* Margem entre os sub-tópicos */
+      display: block;
       padding: 10px;
-      background-color: #ffffff; /* Fundo branco */
-      color: #333333; /* Texto em cinza escuro */
+      background-color: #ffffff;
+      color: #333333;
       font-size: 16px;
-      border-left: 3px solid #e0e0e0; /* Barra lateral para destacar os sub-tópicos */
+      border-left: 3px solid #e0e0e0;
       transition: background-color 0.3s;
 
       &:hover {
-        background-color: #f0f0f0; /* Efeito hover */
+        background-color: #f0f0f0;
       }
     }
+  }
+
+  /* Handle para redimensionar */
+  .resizer {
+    width: 5px; /* Aumenta a largura do handle para facilitar o redimensionamento */
+    background-color: #cccccc;
+    cursor: ew-resize; /* Muda o cursor para indicar redimensionamento */
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
   }
 }
 
 /* Responsividade */
 @media (max-width: 750px) {
   .sidebar {
-    width: 60px;
+    width: 150px;
+    font-size: 10px;
+   
   }
 
   .sidebar.collapsed {
     width: 40px;
   }
+ 
 }
 
 @media (max-width: 430px) {
   .sidebar {
-    width: 45%; /* Largura ajustada para telas menores */
+    width: 45%;
   }
 
   .sidebar.collapsed {
-    width: 40px; /* Sidebar colapsado em telas pequenas */
+    width: 40px;
   }
 }
