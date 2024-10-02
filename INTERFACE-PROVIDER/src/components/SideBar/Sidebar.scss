@@ -53,7 +53,8 @@
 .toggle-btn-floating {
   position: fixed; /* Coloca o botão fora da sidebar */
   top: 69px; /* Ajuste conforme necessário */
- 
+  height: 40px;
+  width: 40px;
   background: #333;
   color: #fff;
   border: none;
@@ -107,9 +108,48 @@
   .sidebar.collapsed {
     width: 40px;
   }
+  .toggle-btn-floating {
+   
+    width: 40px;
+    height: 40px;
+    left: calc(10% + 5px); /* Mantém 5px de distância mesmo no mobile */
+  }
+}
+@media (max-width: 600px) {
+  .sidebar {
+    width: 34%;
+    font-size: 10px;
+  }
+
+  .sidebar.collapsed {
+    width: 0px;
+  }
+  .toggle-btn-floating {
+    position: fixed; /* Coloca o botão fora da sidebar */ 
+   width: 40px;
+   height: 40px;
+  
+  }
+  
+ 
+  
+  
 }
 
 @media (max-width: 430px) {
+  .sidebar {
+    width: 45%;
+  }
+
+  .sidebar.collapsed {
+    width: 40px;
+  }
+
+  .toggle-btn-floating {
+    left: calc(100% + 5px); /* Mantém 5px de distância mesmo no mobile */
+  }
+}
+@media (max-width: 330px) {
   .sidebar {
     width: 45%;
   }

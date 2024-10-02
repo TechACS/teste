@@ -1,0 +1,42 @@
+.cardsGeral-0 {
+    display: flex;
+    gap: 2px;
+    justify-content: center;
+    flex: 1;
+  }
+  
+  .cardsGeral-1 {
+    background-color: rgb(127, 253, 247);
+    border-radius: 8px;
+    padding: 8px;
+    flex: 1 1 20%; // Define uma base flexível para os cards
+   // Define o tamanho mínimo para evitar cards muito pequenos
+    transition: flex-basis 0.3s ease; // Transição suave
+  
+    h1 {
+      font-size: 11px;
+    }
+    h2 {
+        font-size: 11px;
+      }
+  }
+  
+  // Para ajustar o comportamento em diferentes telas, pode adicionar media queries
+  @media (max-width: 1200px) {
+    .cardsGeral-1 {
+      flex-basis: 25%; // Ajusta a base para telas menores
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .cardsGeral-1 {
+      flex-basis: 30%; // Mais ajuste em telas ainda menores
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .cardsGeral-1 {
+      flex-basis: 45%; // Ajuste final para telas bem pequenas
+    }
+  }
+  
