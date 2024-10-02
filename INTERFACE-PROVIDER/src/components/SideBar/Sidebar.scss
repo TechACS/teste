@@ -1,55 +1,38 @@
+/* Sidebar */
 .sidebar {
   height: 100vh;
-  background-color: #ffffff; /* Fundo branco */
-  color: #333333; /* Texto em cinza escuro */
+  background-color: #ffffff;
+  color: #333333;
   position: fixed;
   top: 69px;
   left: 0;
-  transition: width 0.3s;
+  transition: width 0.3s ease;
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Sombra leve */
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
   z-index: 1000;
-  width: 200px; /* Largura inicial padrão */
-  max-width: 300px; /* Limita o tamanho máximo da sidebar a 300px */
-  min-width: 50px; /* Tamanho mínimo da sidebar colapsada */
-
+  width: 200px; /* Largura padrão quando expandida */
+  max-width: 300px;
+  
   &.collapsed {
-    width: 50px; /* Largura quando colapsada */
-    
-    .content {
-      display: none; /* Esconde o conteúdo quando colapsada */
-    }
-  }
-
-  .toggle-btn {
-    background: none;
-    border: none;
-    color: #333333;
-    font-size: 20px;
-    cursor: pointer;
-    padding: 10px;
-    margin: 10px;
-    align-self: flex-end;
-    transition: transform 0.3s;
+    width: 0px; /* Sidebar colapsada */
   }
 
   .content {
     padding: 0;
     display: flex;
-    flex-direction: column; /* Coloca os tópicos um abaixo do outro */
+    flex-direction: column;
     gap: 0;
 
-    .servidores {
+    .sidebar-topic {
       cursor: pointer;
       display: flex;
       flex-direction: column;
     }
 
-    /* Ajustando a formatação dos tópicos */
     .topic-link, h1 {
-      font-weight: normal; /* Remove o negrito */
+      font-weight: normal;
       display: block;
       text-decoration: none;
       padding: 15px;
@@ -57,43 +40,61 @@
       color: #333333;
       border-bottom: 1px solid #e0e0e0;
       font-size: 18px;
-      transition: background-color 0.3s;
+      transition: background-color 0.3s ease;
 
       &:hover {
         background-color: #f9f9f9;
       }
     }
-
-    .subtopics {
-      padding-left: 20px;
-      background-color: #f5f5f5;
-    }
-
-    .card-link {
-      display: block;
-      padding: 10px;
-      background-color: #ffffff;
-      color: #333333;
-      font-size: 16px;
-      border-left: 3px solid #e0e0e0;
-      transition: background-color 0.3s;
-
-      &:hover {
-        background-color: #f0f0f0;
-      }
-    }
   }
+}
 
-  /* Handle para redimensionar */
-  .resizer {
-    width: 5px; /* Aumenta a largura do handle para facilitar o redimensionamento */
-    background-color: #cccccc;
-    cursor: ew-resize; /* Muda o cursor para indicar redimensionamento */
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 100%;
+/* Botão flutuante fora da sidebar */
+.toggle-btn-floating {
+  position: fixed; /* Coloca o botão fora da sidebar */
+  top: 69px; /* Ajuste conforme necessário */
+ 
+  background: #333;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 1500;
+  transition: transform 0.3s ease, background-color 0.3s ease, left 0.3s ease; /* Transição suave */
+
+  &:hover {
+    background-color: #555;
+    transform: scale(1.1); /* Efeito de hover */
   }
+}
+.subtopics {
+  padding-left: 20px;
+  background-color: #f5f5f5;
+}
+
+.card-link {
+  display: block;
+  padding: 10px;
+  background-color: #ffffff;
+  color: #333333;
+  font-size: 16px;
+  border-left: 3px solid #e0e0e0;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: #f0f0f0;
+  }
+}
+.resizer {
+  width: 5px; /* Aumenta a largura do handle para facilitar o redimensionamento */
+  background-color: #cccccc;
+  cursor: ew-resize; /* Muda o cursor para indicar redimensionamento */
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
 }
 
 /* Responsividade */
@@ -101,13 +102,11 @@
   .sidebar {
     width: 150px;
     font-size: 10px;
-   
   }
 
   .sidebar.collapsed {
     width: 40px;
   }
- 
 }
 
 @media (max-width: 430px) {
@@ -117,5 +116,9 @@
 
   .sidebar.collapsed {
     width: 40px;
+  }
+
+  .toggle-btn-floating {
+    left: calc(100% + 5px); /* Mantém 5px de distância mesmo no mobile */
   }
 }

@@ -2,14 +2,13 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { FaBars } from 'react-icons/fa';
 import { BiSolidLeftArrow } from 'react-icons/bi';
-import { MdKeyboardArrowLeft, MdKeyboardArrowUp } from "react-icons/md"; // Importando os ícones
 import './Sidebar.scss';
 import SidebarTopic from './componente/SidebarTopic';
-
+import { IoMdClose } from "react-icons/io";
 function Sidebar() {
   const [isCollapsed, setIsCollapsed] = useState(false); // Começa aberto por padrão
   const [visibleSubtopics, setVisibleSubtopics] = useState({});
-  
+
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth <= 430) {
@@ -53,26 +52,34 @@ function Sidebar() {
   ];
 
   return (
-    <div className={`sidebar ${isCollapsed ? 'collapsed' : 'expanded'}`}>
-      <button className="toggle-btn" onClick={toggleSidebar}>
-        {isCollapsed ? <FaBars /> : <BiSolidLeftArrow />}
-      </button>
-
-      <div className="content">
-        {topics.map((topic, index) => (
-          <div key={index} className="sidebar-topic">
-            <SidebarTopic
-              topic={topic.name}
-              path={topic.path}
-              subtopics={topic.subtopics}
-              toggleSubtopics={toggleSubtopics}
-              visibleSubtopics={visibleSubtopics}
-              isSubtopicsAvailable={topic.subtopics && topic.subtopics.length > 0} // Verifica se existem sub-tópicos
-            />
-          </div>
-        ))}
+    <>
+      {/* Sidebar */}
+      <div className={`sidebar ${isCollapsed ? 'collapsed' : 'expanded'}`}>
+        <div className="content">
+          {topics.map((topic, index) => (
+            <div key={index} className="sidebar-topic">
+              <SidebarTopic
+                topic={topic.name}
+                path={topic.path}
+                subtopics={topic.subtopics}
+                toggleSubtopics={toggleSubtopics}
+                visibleSubtopics={visibleSubtopics}
+                isSubtopicsAvailable={topic.subtopics && topic.subtopics.length > 0} // Verifica se existem sub-tópicos
+              />
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
+
+      {/* Botão flutuante fora da sidebar */}
+      <button
+        className="toggle-btn-floating"
+        onClick={toggleSidebar}
+        style={{ left: isCollapsed ? '5px' : '205px' }} // Ajusta a posição com base no estado da sidebar
+      >
+        {isCollapsed ? <FaBars /> : <IoMdClose />}
+      </button>
+    </>
   );
 }
 
