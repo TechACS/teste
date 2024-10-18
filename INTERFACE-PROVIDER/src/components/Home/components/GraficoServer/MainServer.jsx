@@ -44,10 +44,36 @@ function MainServer() {
 
             {/* Apenas os gráficos estão dentro da rolagem */}
             <div className="MainGraficoServer-2" ref={scrollRef}>
-              <DiscoServer />
+              
+              
              
+            <span>
               <MemoriaServer />
+                <h3>
+                    CPU
+                </h3>
+              </span>
+              <span>
+              <DiscoServer />
+                <h3>
+                  Disco server
+                </h3>
+              </span>
+
+              <span>
               <MemoriaServer />
+                <h3>
+                    Memoria server
+                </h3>
+              </span>
+
+              <span>
+              <MemoriaServer />
+                <h3>
+                    Temperatura
+                </h3>
+              </span>
+             
             </div>
 
             <button className="scrollButton right" onClick={scrollRight}>

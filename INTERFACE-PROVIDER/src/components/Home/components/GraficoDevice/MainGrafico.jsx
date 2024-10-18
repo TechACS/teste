@@ -41,9 +41,36 @@ function MainGrafico() {
 
             {/* Apenas os gráficos estão dentro da rolagem */}
             <div className="MainGraficoDevide-2" ref={scrollRef}>
+              <span className=''>
               <Online />
+              <h3>ONLINE</h3>
+              </span>
+
+              <span className=''>
+              <Online />
+              <h3>OFFLINE</h3>
+              </span>
+
+              <span>
               <QTDEquipamentos />
+                <h3>
+                  QUANT. DEVICES
+                </h3>
+              </span>
+
+              <span>
               <Sinal />
+                <h3>
+                    sinal
+                </h3>
+              </span>
+              <span>
+              <Sinal />
+                <h3>
+                    IPV4 e IPV6
+                </h3>
+              </span>
+            
             </div>
 
             <button className="scrollButton right" onClick={scrollRight}>

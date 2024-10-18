@@ -52,6 +52,11 @@
     overflow-x: hidden; /* Permitir rolagem horizontal */
     scroll-behavior: smooth;
     flex-wrap: nowrap; /* Impedir quebra de linha dos gráficos */
+  
+  h3{
+    text-align: center;
+    margin-top: 25px;
+  }
   }
   
   .scrollButton {

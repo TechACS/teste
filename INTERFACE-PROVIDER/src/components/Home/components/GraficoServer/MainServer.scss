@@ -51,6 +51,11 @@
     scroll-behavior: smooth;
     flex-wrap: nowrap; /* Mantém os itens em linha */
     height: 100%; /* Certifique-se que o container tenha altura */
+  
+    h3 {
+      margin-top: 25px;
+      text-align: center;
+    }
   }
   
   

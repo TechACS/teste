@@ -49,6 +49,7 @@ const Online = () => {
   return (
     <div style={{ width: '100%', maxWidth: '400px', height: 'auto' }}>
       <Pie data={data} options={options} />
+      
     </div>
   );
 };
